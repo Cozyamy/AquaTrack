@@ -43,6 +43,10 @@ html {
     font-family: var(--font-family-base);
 }
 
+.indexLogo {
+    display: none;
+}
+
 .indexNav {
     display: flex;
     flex-direction: row;
@@ -69,6 +73,10 @@ html {
     color: var(--color-primary);
 }
 
+.navBtn {
+    display: none;
+}
+
 .navBtns {
     display: flex;
     flex-direction: row;
@@ -90,13 +98,27 @@ html {
 
 .loginBtn {
     padding: 17px 72px;
-    gap: 10px;
     background-color: var(--color-primary);
     border: none;
     border-radius: 8px;
     color: var(--color-white);
     font-weight: var(--font-weight-semibold);
     font-size: var(--font-size-medium);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color-black);
 }
 
 /* end index nav */
@@ -368,4 +390,283 @@ html {
     color: var(--color-white);
     font-size: 18px;
     font-weight: 500;
+}
+
+/* index page responsiveness */
+@media only screen and (max-width: 1115px) {
+    .indexNav {
+        padding: 20px 60px;
+    }
+
+    .navMenu {
+        gap: 30px;
+    }
+
+    .navBtns {
+        gap: 14px;
+    }
+
+    .loginBtn {
+        padding: 17px 40px;
+    }
+
+    .indexHero {
+        padding: 90px 60px;
+        gap: 10px;
+    }
+
+    .indexHero h1 {
+        font-size: var(--font-size-x-large);
+    }
+
+    .indexHero p {
+        text-align: justify;
+    }
+
+    .features {
+        margin: 20px 60px;
+    }
+
+    .features h2 {
+        font-size: var(--font-size-large);
+    }
+
+    .features article p {
+        font-size: var(--font-size-medium);
+    }
+
+    .features div {
+        padding: 40px 24px;
+    }
+
+    .features img {
+        width: 100px;
+    }
+
+    .getStarted {
+        background-size: 50% 100%;
+    }
+
+    .getStarted article {
+        padding: 70px 0px 75px 80px;
+    }
+
+    .getStarted h4 {
+        font-size: 25px;
+    }
+
+    .getStarted h5 {
+        font-size: 20px;
+    }
+
+    .getStarted p {
+        font-size: var(--font-size-small);
+    }
+
+    .contactUs {
+        margin: 106px 180px;
+    }
+
+    .contactUs h5 {
+        font-size: var(--font-size-large);
+    }
+
+    .indexFooter {
+        padding: 65px 60px;
+    }
+
+    .indexFooter p {
+        font-size: var(--font-size-small);
+    }
+
+    .indexFooter h6 {
+        font-size: var(--font-size-medium);
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    .indexHero article {
+        width: 60%;
+    }
+
+    .indexHero img {
+        width: 40%;
+    }
+
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+} 
+
+@media only screen and (max-width: 944px) {
+    .getStarted article {
+        padding: 70px 5px 75px 60px;
+    }
+
+    .getStarted {
+        background-size: 45% 100%;
+    }
+
+    .contactUs {
+        margin: 90px 100px;
+    }
+
+    .navMenu {
+        gap: 20px;
+    }
+
+    .navBtns {
+        gap: 10px;
+    }
+
+    .loginBtn {
+        padding: 14px 30px;
+    }
+}
+
+@media only screen and (max-width: 896px) {
+    .indexHero img {
+        display: none;
+    }
+
+    .indexHero article {
+        width: 100%;
+    }
+
+    .indexHero h1 {
+        text-align: center;
+    }
+
+    .heroBtn {
+        width: 40%;
+        align-self: center;
+    }
+
+    .hamburger{
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+   .navMenu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 20px;
+    flex-direction: column;
+    background-color: var(--color-white);
+    width: 100%;
+    padding-top: 2%;
+    padding-left: 50%;
+    padding-right: 50%;
+    padding-bottom: 1%;
+    align-items: flex-start;
+    transition: 0.3s;
+  }
+
+  .navMenu.active {
+    left: 0;
+  }
+
+  .indexLogo, .navBtn {
+    display: block;
+  }
+
+  .navBtns, .navlogo {
+    display: none;
+  }
+
+  .signupBtn {
+    white-space: nowrap;
+  }
+
+  .getStarted a {
+    padding: 12px 20px;
+  }
+
+  .indexFooter section {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .indexFooter p {
+    position: absolute;
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+    .indexNav {
+        padding: 30px;
+    }
+
+    .indexHero {
+        padding: 50px 30px;
+    }
+
+    .indexHero h1 {
+        font-size: 24px;
+    }
+
+    .heroBtn {
+        padding: 20px;
+        width: 68%;
+    }
+
+    .features {
+        margin: 20px 30px;
+    }
+
+    .grid-container {
+        grid-template-columns: auto;
+    }
+
+    .getStarted {
+        background-image: none;
+    }
+
+    .getStarted article {
+        width: 100%;
+        padding: 70px 30px;
+    }
+
+    .getStarted a {
+        width: 100%;
+    }
+
+    .getStarted h4 {
+        font-size: 20px;
+    }
+
+    .getStarted h5 {
+        font-size: 16px;
+    }
+
+    .getStarted p {
+        font-size: 14px;
+    }
+
+    .contactUs {
+        margin: 50px 30px;
+    }
+
+    .indexFooter {
+        padding: 60px 30px;
+    }
+
+    .indexFooter section {
+        align-items: center;
+        justify-content: center;
+    }
 }
