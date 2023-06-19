@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="icon" type="image/svg" sizes="32x32" href="../images/logo.svg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<script src="script.js" defer></script>
+	<style>
+	@import url('https://fonts.cdnfonts.com/css/montserrat');
+	</style>
+                
+</head>
+<body class="dashboard">
+	<aside class="dashboardAside">
+		<a href="dashboard.html">
+			<img src="../images/logo.svg">
+		</a>
+		<nav>
+			<a class="activeDash" href="dashboard.html">
+				<img src="../images/Dashboard.svg">&nbsp; 
+				Dashboard
+			</a>
+			<a href="farms.html">
+				<img src="../images/fluent_home-database-24-filled.svg">&nbsp;
+				Farms
+			</a>
+			<a href="batch.html">
+				<img src="../images/material-symbols_set-meal.svg">&nbsp;
+				Batch
+			</a>
+			<a href="harvest.html">
+				<img src="../images/mdi_account-cash.svg">&nbsp;
+				Harvest
+			</a>
+			<a href="inventory.html">
+				<img src="../images/material-symbols_inventory-2-rounded.svg">&nbsp;
+				Inventory
+			</a>
+			<a href="settings.html">
+				<img src="../images/material-symbols_settings.svg">&nbsp;
+				Settings
+			</a>
+		</nav>
+		<a href="logout.html" class="logout">
+			<img src="../images/Group.svg">&nbsp;
+			Log Out
+		</a>
+	</aside>
+	<main class="dashboardMain">
+		<header>
+			<h1>Dashboard</h1>
+			<div class="dashNavMenu">
+				<p>Jane Doe</p>
+				<img src="../images/UserCircleOutline.svg">
+				<div class="dropdown">
+  					<button onclick="myFunction()" class="dropbtn">&or;</button>
+  					<div id="myDropdown" class="dropdown-content">
+    					<a href="#" class="activeDropdown">Farm 1</a>
+    					<a href="#">Farm 2</a>
+   	 					<a href="logout.html" class="navLogout">
+   	 						<img src="../images/Group.svg">&nbsp;
+   	 					Log Out</a>
+  					</div>
+				</div>
+			</div>
+		</header>
+		<section class="dashboardWelcome">
+			<img src="../images/Group 11637.svg">
+			<div>
+				<h2>Good Afternoon, Jane</h2>
+				<p>Welcome to your AquaTrack dashboard.<br>
+				Pond 5 is five (5) months today!</p>
+			</div>
+		</section>
+		<section class="dashboardStatistic">
+			<h2>Farm Statistic</h2>
+			<div class="grid-containers">
+				<div class="grid-items">
+					<img src="../images/Group 7843.svg">
+					<div>
+						<h6>Capital</h6>
+						<h5>₦5,842,000</h5>
+						<p class="positivePrice">2.5% &uarr;</p>
+					</div>
+				</div>
+				<div class="grid-items">
+					<img src="../images/Group 7843 (1).svg">
+					<div>
+						<h6>Net Profit</h6>
+						<h5>₦1,842,000</h5>
+						<p class="positivePrice">2.5% &uarr;</p>
+					</div>
+				</div>
+				<div class="grid-items">
+					<img src="../images/Group 7843 (2).svg">
+					<div>
+						<h6>Total Expenses</h6>
+						<h5>₦842,000</h5>
+						<p class="negativePrice">2.5% &darr;;</p>
+					</div>
+				</div>
+				<div class="grid-items">
+					<img src="../images/Group 7844.svg">
+					<div>
+						<h6>Total Balance</h6>
+						<h5>₦2,000,000</h5>
+						<p class="positivePrice">2.5% &darr;</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="ChartCalender">
+			<section>
+				<div class="contain">
+				    <a href="dashboard.html#featured" class="show" id="featured">FEATURED</a>
+				    <a href="dashboard2.html#mortality">MORTALITY</a>
+				    <a href="dashboard3.html#weight">WEIGHT GAIN/LOSS</a>
+	    		</div>
+	    		<div class="chart">
+	    			<h4>TITLE</h4>
+			        <canvas id="myChart"></canvas>
+			        <div>
+			        	<p class="dot"><span></span>Feed Consumption</p>
+			        	<p class="dots"><span></span>Fish Growth</p>
+			        </div>
+	    		</div>
+	    	</section>
+	    	<section>
+	    		
+	    	</section>
+		</section>
+	</main>
+
+<script>
+var xValues = ["September", "October", "November", "December", "January", "February", "March", "April", "May", "June"];
+var yValues = [13, 20, 30, 50, 95, 75, 63, 75, 88, 50];
+var barColors = ["#0A2A5E", "#0A2A5E", "#0A2A5E", "#0A2A5E", "#0A2A5E", "#0A2A5E", "#0A2A5E", "#0A2A5E", "#0A2A5E", "#0A2A5E"];
+var yValue = [9, 13, 25, 45, 70, 52, 48, 53, 65, 35];
+var barColor = ["#0180EA", "#0180EA", "#0180EA", "#0180EA", "#0180EA", "#0180EA", "#0180EA", "#0180EA", "#0180EA", "#0180EA"];
+var barPercentage = [0.25];
+
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues,
+      barPercentage: 0.25
+    },
+    {
+      backgroundColor: barColor,
+      data: yValue
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: false,
+      align: "start"
+    }
+  }
+});
+</script>
+
+<script type="text/javascript" src="../js/script.js"></script>
+</body>
+</html>

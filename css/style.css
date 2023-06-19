@@ -130,11 +130,13 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .indexHero img {
-    width: 50%;
+    width: 60%;
     height: auto;
+    margin-right: -20%;
 }
 
 .indexHero article {
@@ -302,13 +304,13 @@ html {
     margin-bottom: 80px;
 }
 
-.contactUs label {
+.contactUs label, .waitlistSection label {
     color: var(--color-black);
     font-size: var(--font-size-medium);
     font-weight: 500;
 }
 
-.contactUs input {
+.contactUs input, .waitlistSection input {
     border: 1px solid var(--text-color);
     border-radius: 8px;
     padding: 10px 24px;
@@ -338,7 +340,7 @@ html {
     padding-left: 24px;
 }
 
-.contactUs form {
+.contactUs form, .waitlistSection form {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -354,7 +356,7 @@ html {
     cursor: pointer;
 }
 
-.contactUs form button {
+.contactUs form button, .waitlistSection form button {
     color: var(--color-white);
     font-size: 20px;
     font-weight: var(--font-weight-semibold);
@@ -669,4 +671,637 @@ html {
         align-items: center;
         justify-content: center;
     }
+}
+
+/* END OF INDEX PAGE INCLUDING MEDIA QUERIES */
+
+/* START OF SIGNUP AND LOGIN PAGES */
+
+.signuplogo {
+    box-shadow: 0px 2px 58px rgba(217, 217, 217, 0.25);
+    padding: 20px 68px;
+}
+
+.signupmain {
+    padding: 42px 123px;
+    border: 1px solid #0180EA;
+    box-shadow: 0px 2px 58px rgba(217, 217, 217, 0.25);
+    border-radius: 16px;
+    margin: 5% auto;
+    width: 65%;
+}
+
+.signupmain h1 {
+    color: var(--color-black);
+    font-size: 36px;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.signupmain form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.signupmain input {
+    margin-bottom: 8px;
+    border: 1px solid var(--color-black);
+    border-radius: 8px;
+    padding: 10px 24px;
+}
+
+.signupmain label {
+    font-weight: var(--font-weight-bold);
+    font-size: 20px;
+    color: var(--color-black);
+}
+
+.signupmain label span {
+    color: #F84D4D;
+}
+
+.signupmain div {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin: 20px 0px;
+    align-items: center;
+}
+
+.signupmain div a {
+    margin-left: 190px;
+    text-decoration: underline;
+    color: var(--color-black);
+}
+
+.forgot {
+    display: none;
+}
+
+.signupmain div input {
+    width: 37px;
+    height: 30px;
+}
+
+.signupmain p {
+    color: var(--color-black);
+    font-size: 20px;
+}
+
+.signupmain button {
+    color: var(--color-white);
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-bold);
+    background-color: var(--color-primary);
+    border-radius: 8px;
+    padding: 16px 32px;
+    border: none;
+    width: 70%;
+    align-self: center;
+}
+
+.signupNav a {
+    color: #0180EA;
+}
+
+.signupNav {
+    align-self: center;
+}
+
+/* Signup page responsiveness */
+@media only screen and (max-width: 1115px) {
+    .signupmain {
+        padding: 40px 80px;
+    }
+
+    .signupmain div a {
+        margin-left: 60px;
+    }
+}
+
+@media only screen and (max-width: 1044px) {
+    .signupmain {
+        padding: 40px 50px;
+    }
+
+    .signupmain h1 {
+        font-size: 28px;
+    }
+
+    .signupmain label, .signupmain p {
+        font-size: 18px;
+    }
+
+    .signupmain button {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .signupmain label, .signupmain p {
+        font-size: var(--font-size-medium);
+    } 
+
+    .signupmain button {
+        font-size: 18px;
+        padding: 12px 24px;
+        width: 100%;
+    }
+
+    .signupmain div a {
+        display: none;
+    }
+
+    .forgot {
+        display: block;
+        margin-top: -25px;
+        margin-bottom: 30px;
+        color: var(--color-black);
+        text-decoration: underline;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .signupmain {
+        width: 90%;
+        padding: 40px 30px;
+    }
+}
+
+/* END OF SIGNUP AND LOGIN PAGES INCLUDING MEDIA QUERIES */
+
+.forgotMain p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.forgotMain input {
+    margin-bottom: 40px;
+}
+
+.forgotMain a {
+    color: var(--color-primary);
+    text-align: center;
+    font-weight: var(--font-weight-bold);
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+.box ul {
+    display: flex;
+    flex-direction: row;
+    gap: 23px;
+    justify-content: center;
+}
+
+.box input {
+    width: 77px;
+    height: 77px;
+    background-color: #F5F6F8;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+}
+
+.forgotMain {
+    display: flex;
+    flex-direction: column;
+}
+
+.forgotMain img {
+    align-self: center;
+    margin-bottom: 32px;
+}
+
+.popup {
+    width: 50%
+}                                                                                                                                                                                                                                                                                                
+
+.popup button {
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(23, 206, 137, 0.07);
+}
+
+/* Waitlist START */
+
+.waitlistSection {
+    margin: 106px 97px;
+}
+
+.waitlistSection h5{
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-x-large);
+    color: var(--color-black);
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.waitlist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+}
+
+.waitlistDetails {
+    font-size: var(--font-size-large);
+    margin-bottom: 60px;
+}
+
+.waitlistSection button {
+    color: var(--color-white);
+    font-size: var(--font-size-medium);
+    font-weight: 600;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    padding: 18px 30px;
+    width: 50%;
+
+}
+
+.popup {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+        .popup-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 35px;
+            width: 27%;
+            border-radius: 14px;
+        }
+
+        .popup-content img {
+            width: 40%;
+            height: auto;
+        }
+
+        .popup-content h6 {
+            font-size: 18px;
+            color: var(--color-black);
+            font-weight: var(--font-weight-semibold);
+            margin-top: 21px;
+        }
+
+        .popup-content p {
+            font-size: 12px;
+            color: var(--color-black);
+            margin-bottom: 22px;
+        }
+        
+        .popup-content button {
+            display: block;
+            margin: 0 auto;
+        }
+        .show {
+            display: block;
+        }
+.popup-content label {
+    color: var(--color-black);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.popup-content input {
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    padding: 10px 24px;
+    margin-bottom: 10px;
+}
+
+.formDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.lname, .fname {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 45%;
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popup-content button {
+    color: var(--color-white);
+    font-size: 20px;
+    font-weight: var(--font-weight-semibold);
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* Waitlist END */
+
+/* DASHBOARD */
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    background-color: #FCFCFE;
+}
+
+.dashboardAside {
+    width: 15%;
+    background-color: var(--color-white);
+    padding: 28px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-left: 16px;
+}
+
+.dashboardAside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 10px 0px;
+}
+
+.dashboardAside nav a {
+    padding: 8px 12px 8px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    color: #0180EA;
+}
+
+.activeDash {
+    border-left: 4px solid #0180EA;
+    background-color: rgba(1, 128, 234, 0.08);
+    margin-left: -16px;
+    font-weight: var(--font-weight-bold);
+}
+
+.activeDash img {
+    padding-left: 10px;
+}
+
+.logout {
+    margin-top: 30px;
+    font-weight: var(--font-weight-bold);
+    font-size: 20px;
+    color: #F84D4D;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 70%;
+}
+
+.dashboardMain {
+    width: 80%;
+    margin-left: 47px;
+    margin-right: 40px;
+}
+
+.dashboardMain header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 28px 31px;
+}
+
+.dashboardMain h1 {
+    color: var(--color-primary);
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-bold);
+}
+
+.dashNavMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.dashNavMenu p {
+    color: var(--color-primary);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
+}
+
+.dropbtn {
+  background-color: #FCFCFE;
+  color: var(--color-primary);
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  padding-right: 70px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: conic-gradient(from 144.02deg at 50% 50%, rgba(255, 253, 245, 0.67) 0deg, #FFFFFF 52.5deg, rgba(255, 254, 251, 0.58) 210deg, rgba(255, 253, 245, 0.67) 360deg), #FFFFFF;
+  min-width: 120px;
+  text-align: center;
+  overflow: auto;
+  border: 1px solid #EBEBEB;
+  border-radius: 12px;
+  z-index: 1;
+  padding: 23px 0px 0px;
+}
+
+.dropdown-content a {
+  color: rgba(17, 20, 39, 0.81);
+  padding: 8px 12px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.activeDropdown {
+   background-color: rgba(245, 245, 245, 0.77); 
+}
+
+.navLogout {
+    border-top: 1px solid #EBEBEB;
+    padding: 24px 12px;
+}
+
+.dropdown a:hover {
+    background-color: #D4D1D1;
+}
+
+.show {
+    display: block;
+}
+
+.dashboardWelcome {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-white);
+    margin: 20px 31px;
+    gap: 25px;
+    padding: 39px 51px;
+    box-shadow: 0px 4px 8px rgba(236, 236, 236, 0.56);
+    border: none;
+    border-radius: 12px;
+    align-items: flex-start;
+}
+
+.dashboardWelcome h2 {
+    font-size: var(--font-size-large);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+.dashboardWelcome p {
+    color: #8C8B88;
+    font-size: 20px;
+    margin-top: 23px;
+}
+
+.dashboardStatistic h2 {
+    color: var(--color-primary);
+    margin: 0px 31px;
+}
+
+.grid-containers {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 16px;
+    margin: 20px 31px;
+}
+
+.grid-items {
+    box-shadow: 0px 4px 25px rgba(174, 174, 192, 0.15);
+    border-radius: 10px;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 16px 20px;
+}
+
+.grid-items img {
+    width: 42px;
+    height: 42px;
+}
+
+.grid-items h6 {
+    color: #7C8DB5;
+}
+
+.grid-items h5 {
+    color: #0A2A5E;
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-bold);
+}
+
+.positivePrice {
+    color: rgba(0, 150, 106, 0.7);
+}
+
+.negativePrice {
+    color:  rgba(245, 66, 66, 0.7);
+}
+
+.contain {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 52px;
+}
+
+.contain a {
+    color: #8C8888;
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    padding: 20px 10px;
+    outline: none;
+}
+
+.show {
+    color: var(--color-black);
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.chart {
+    background-color: var(--color-white);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    width: 60%;
+    height: auto;
+    margin-bottom: 28px;
+    padding-bottom: 30px;
+}
+
+.chart h4 {
+    padding: 24px 14px;
+    color: #8C8B88;
+    font-size: 12px;
+    font-size: var(--font-weight-bold);
+}
+
+.chart div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.dot, .dots {
+    color: var(--color-black);
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.dot span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0A2A5E;
+}
+
+.dots span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0180EA;
+}
+
+.chart canvas {
+    width: 640px;
+    height: 201px;
+    padding-left: 8px;
+    padding-right: 27px;
 }
