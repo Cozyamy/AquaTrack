@@ -880,15 +880,16 @@ html {
     margin-bottom: 32px;
 }
 
-.popup {
+.popups {
     width: 50%
 }                                                                                                                                                                                                                                                                                                
 
-.popup button {
+.popups button {
     color: var(--color-primary);
     background-color: var(--color-white);
     border: 1px solid var(--color-primary);
     border-radius: 5px;
+    width: 100%;
     box-shadow: 0px 2px 4px rgba(23, 206, 137, 0.07);
 }
 
@@ -931,6 +932,30 @@ html {
     cursor: pointer;
 
 }
+
+.popups {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 340px;
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    #closeBtns {
+        margin-left: 90%;
+        cursor: pointer;
+        color: #D6D1D1;
+    }
+
+    .popups img {
+        margin-left: 35%;
+        margin-right: auto;
+    }
 
 .popup {
             position: fixed;
