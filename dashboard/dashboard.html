@@ -117,11 +117,27 @@
 		<section class="ChartCalender">
 			<section>
 				<div class="contain">
-				    <a href="dashboard.html#featured" class="show" id="featured">FEATURED</a>
-				    <a href="dashboard2.html#mortality">MORTALITY</a>
-				    <a href="dashboard3.html#weight">WEIGHT GAIN/LOSS</a>
+				    <button id="btn1" class="myButton active">FEATURED</button>
+						<button id="btn2" class="myButton">MORTALITY</button>
+						<button id="btn3" class="myButton">WEIGHT GAIN/LOSS</button>
 	    		</div>
-	    		<div class="chart">
+	    		<div class="chart section active" id="section1">
+	    			<h4>TITLE</h4>
+			        <canvas id="myChart"></canvas>
+			        <div>
+			        	<p class="dot"><span></span>Feed Consumption</p>
+			        	<p class="dots"><span></span>Fish Growth</p>
+			        </div>
+	    		</div>
+	    		<div class="chart section" id="section2">
+	    			<h4>TITLE</h4>
+			        <canvas id="myChart"></canvas>
+			        <div>
+			        	<p class="dot"><span></span>Feed Consumption</p>
+			        	<p class="dots"><span></span>Fish Growth</p>
+			        </div>
+	    		</div>
+	    		<div class="chart section" id="section3">
 	    			<h4>TITLE</h4>
 			        <canvas id="myChart"></canvas>
 			        <div>
@@ -170,5 +186,50 @@ new Chart("myChart", {
 </script>
 
 <script type="text/javascript" src="../js/script.js"></script>
+<script>
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+const btn3 = document.getElementById('btn3');
+
+const section1 = document.getElementById('section1');
+const section2 = document.getElementById('section2');
+const section3 = document.getElementById('section3');
+
+btn1.addEventListener('click', () => {
+  section1.classList.add('active');
+  section2.classList.remove('active');
+  section3.classList.remove('active');
+});
+
+btn2.addEventListener('click', () => {
+  section1.classList.remove('active');
+  section2.classList.add('active');
+  section3.classList.remove('active');
+});
+
+btn3.addEventListener('click', () => {
+  section1.classList.remove('active');
+  section2.classList.remove('active');
+  section3.classList.add('active');
+});
+
+
+</script>
+<script type="text/javascript">
+	const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', function () {
+    if (!this.classList.contains('active')) {
+      const activeButton = document.querySelector('.active');
+      activeButton.classList.remove('active');
+      this.classList.add('active');
+    }
+  });
+});
+
+
+
+</script>
 </body>
 </html>

@@ -1132,6 +1132,37 @@ html {
 }
 }
 
+@media only screen and (max-width: 500px) {
+    .waitlistSection button {
+    font-size: var(--font-size-small);
+    padding: 8px 6px;
+    width: 50%;
+    align-self: center;
+
+}
+
+.waitlistSection {
+    margin: 80px 30px;
+}
+
+.waitbtn {
+    padding: 8px 6px;
+}
+
+.waitlistSection form button {
+    padding: 8px 6px;
+    font-size: 14px;
+}
+
+.popup-content input {
+    padding: 8px 6px;
+}
+
+.popup-content {
+    width: 80%;
+}
+}
+
 
 /* Waitlist END */
 
@@ -1355,16 +1386,19 @@ html {
     margin-bottom: 52px;
 }
 
-.contain a {
+.contain button {
     color: #8C8888;
     font-size: 20px;
     font-weight: var(--font-weight-bold);
     padding: 20px 10px;
     outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
-.show {
-    color: var(--color-black);
+.myButton.active {
+  color: var(--color-black);
     border-bottom: 3px solid var(--color-primary);
 }
 
@@ -1422,4 +1456,12 @@ html {
     height: 201px;
     padding-left: 8px;
     padding-right: 27px;
+}
+
+.section {
+  display: none;
+}
+
+.active {
+  display: block;
 }
