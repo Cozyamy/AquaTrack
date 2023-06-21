@@ -1149,9 +1149,13 @@ html {
     padding: 8px 6px;
 }
 
-.waitlistSection form button {
+.waitlistSection form button, .popup-content button, .loginBtn {
     padding: 8px 6px;
     font-size: 14px;
+}
+
+.waitlist_navlink {
+    margin-left: -0px;
 }
 
 .popup-content input {
