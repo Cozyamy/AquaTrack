@@ -115,6 +115,7 @@ html {
 
 .bar {
   display: block;
+  margin-left: -50px;
   width: 25px;
   height: 3px;
   margin: 5px auto;
@@ -567,6 +568,7 @@ html {
 
    .navMenu {
     position: fixed;
+    left: -100%;
     top: 70px;
     gap: 20px;
     flex-direction: column;
@@ -1174,6 +1176,9 @@ html {
 /* Waitlist END */
 
 /* DASHBOARD */
+.navbar {
+    display: none;
+}
 
 .dashboard {
     display: flex;
@@ -1252,6 +1257,7 @@ html {
     margin-left: -16px;
     font-weight: var(--font-weight-bold);
     padding: 8px 12px 8px 0px;
+    cursor: pointer;
 }
 
 .dashboardMain {
@@ -1264,6 +1270,7 @@ html {
     flex-direction: row;
     justify-content: space-between;
     padding: 28px 31px;
+    align-items: center;
 }
 
 .dashboardMain h1 {
@@ -1295,22 +1302,24 @@ html {
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background: conic-gradient(from 144.02deg at 50% 50%, rgba(255, 253, 245, 0.67) 0deg, #FFFFFF 52.5deg, rgba(255, 254, 251, 0.58) 210deg, rgba(255, 253, 245, 0.67) 360deg), #FFFFFF;
-  min-width: 120px;
-  text-align: center;
-  overflow: auto;
-  border: 1px solid #EBEBEB;
-  border-radius: 12px;
-  z-index: 1;
-  padding: 23px 0px 0px;
-}
+    position: relative;
+    display: inline-block;
+  }
+  
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background: conic-gradient(from 144.02deg at 50% 50%, rgba(255, 253, 245, 0.67) 0deg, #FFFFFF 52.5deg, rgba(255, 254, 251, 0.58) 210deg, rgba(255, 253, 245, 0.67) 360deg), #FFFFFF;
+        min-width: 120px;
+        top: 100%;
+        left: 0;
+        text-align: center;
+        overflow: auto;
+        border: 1px solid #EBEBEB;
+        border-radius: 12px;
+        z-index: 1;
+        padding: 23px 0px 0px;
+    }
 
 .dropdown-content a {
   color: rgba(17, 20, 39, 0.81);
@@ -1514,7 +1523,7 @@ html {
 }
 
 .calendarsBtn {
-    margin-left: 40%;
+    align-self: flex-end;
     padding: 14px;
 }
 
@@ -1639,6 +1648,13 @@ html {
     flex-direction: row;
     gap: 77px;
     margin-left: 27px;
+  }
+
+  .pie-chart-container canvas {
+    width: 100%;
+    max-width: 221px;
+    height: 100%; 
+    max-height: 221px;
   }
 
   .pieLabel {
@@ -1783,10 +1799,6 @@ html {
         width: 100%;
     }
 
-    .calendarsBtn {
-        margin-left: 72%;
-    }
-
     .calenders h4 {
         margin-top: 20px;
     }
@@ -1824,10 +1836,6 @@ html {
 }
 
 @media only screen and (max-width: 1030px) {
-    .calendarsBtn {
-        margin-left: 60%;
-    }
-
     .icons {
         gap: 240px;
     }
@@ -1845,8 +1853,22 @@ html {
         display: none;
     }
 
+    .Logo_hamburger {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .dashboardMain header h1 {
+        display: none;
+    }
+
     .dashboardAside_Logo1 {
         display: block;
+    }
+
+    .dashNavMenu {
+        margin-right: 60px;
     }
 
     .dashboardMain {
@@ -1865,5 +1887,212 @@ html {
 
     .dropbtn {
         padding-right: 30px;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar-menu a {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        white-space: nowrap;
+        align-items: center;
+        
+    }
+
+    .navbar-menu a:visited {
+        color: #0180EA;
+    }
+
+    .navbar-menu a:hover {
+        border-left: 4px solid #0180EA;
+        background-color: rgba(1, 128, 234, 0.08);
+        margin-left: -16px;
+        font-weight: var(--font-weight-bold);
+    }
+
+    .navbar-menu .logout:hover {
+        border-left: 4px solid #F84D4D;
+        background-color: rgba(223, 102, 72, 0.08);
+        margin-left: -16px;
+        font-weight: var(--font-weight-bold);
+        padding: 8px 12px 8px 0px;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        min-width: 40px;
+        padding: 16px 0px 0px;
+    }
+    
+}
+
+@media only screen and (max-width: 650px) {
+    .dashboardAside_Logo1 {
+        width: 182px;
+        height: auto;
+    }
+
+    .dashboardAside_Logo1 img{
+        width: 100%;
+        height: auto;
+    }
+
+    .dashboardMain h1 {
+        font-size: var(--font-size-medium);
+    }
+
+    .dashNavMenu {
+        gap: 2px;
+        margin-right: 35px;
+        margin-top: -10px;
+    }
+
+    .dashNavMenu p {
+        font-size: var(--font-size-small);
+        white-space: nowrap;
+    }
+
+    .menuimg {
+        display: none;
+    }
+
+    .dropbtn {
+        font-size: var(--font-size-medium);
+    }
+
+    .dropdown-content a {
+        font-size: 12px;
+    }
+
+    .dashboardWelcome {
+        flex-direction: column;
+        padding: 29px 21px;
+    }
+    
+    .dashboardWelcome h2 {
+        font-size: 18px;
+    }
+    
+    .dashboardWelcome p {
+        font-size: var(--font-size-small);
+    }
+
+    .dashboardStatistic h2 {
+        font-size: var(--font-size-large); 
+    }
+    
+    .grid-containers {
+        grid-template-columns: auto;
+    }
+    
+    .grid-items h5 {
+        font-size: var(--font-size-medium);
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .positivePrice {
+        font-size: 15px;
+    }
+    
+    .negativePrice {
+        font-size: 15px;
+    }
+
+    .contain {
+        gap: 0px;
+        justify-content: space-between;
+        margin-bottom: 42px;
+    }
+    
+    .contain button {
+        font-size: var(--font-size-small);
+        padding: 10px;
+    }
+
+    .dot, .dots {
+        font-size: var(--font-size-small);
+    }
+
+    .chart {
+        margin-bottom: 5px;
+    }
+
+    .calenders h4 {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .icons {
+        gap: 130px;
+    }
+
+    .current-date {
+        font-size: var(--font-size-medium);
+    }
+
+    .pie-chart-container {
+        flex-direction: column;
+        gap: 50px;
+        margin-left: 0px;
+    }
+
+    .pie-chart-container canvas {
+        align-self: center;
+    }
+    
+}
+
+@media only screen and (max-width: 500px) {
+    .icons {
+        gap: 80px;
+    }
+
+    .dashboardAside_Logo1 {
+        width: 100px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .dashboardMain header {
+        padding: 28px 24px;
+    }
+
+    .icons {
+        gap: 40px;
+    }
+
+    .dashboardAside_Logo1 {
+        width: 85px;
+        height: auto;
+    }
+
+    
+
+    .bar {
+        width: 20px;
+        height: 2px;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+    
+      .hamburger.active .bar:nth-child(3){
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+    .dashNavMenu {
+        gap: 2px;
+        margin-right: 45px;
+    }
+
+    .dashNavMenu p {
+        font-size: 10px;
     }
 }

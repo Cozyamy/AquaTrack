@@ -54,15 +54,67 @@
 	</aside>
 	<main class="dashboardMain">
 		<header>
-			<a href="dashboard.html" class="dashboardAside_Logo1">
-				<img src="../images/logo.svg">
-			</a>
+			<div class="Logo_hamburger">
+				<div class="navbar">
+					<div class="hamburger">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</div>
+					<ul class="navbar-menu navMenu">
+					  <li><a class="activeDash nav-link" href="dashboard.html">
+							<img src="../images/Dashboard.svg">&nbsp; Dashboard
+						   </a>
+					   </li>
+					   <li>
+							<a class="nav-link" href="farms.html">
+								<img src="../images/fluent_home-database-24-filled.svg">&nbsp;
+							Farms
+							</a>
+					   </li>
+					   <li>
+							<a class="nav-link" href="batch.html">
+								<img src="../images/material-symbols_set-meal.svg">&nbsp;
+							Batch
+							</a>
+					   </li>
+					   <li>
+							<a class="nav-link" href="harvest.html">
+								<img src="../images/mdi_account-cash.svg">&nbsp;
+								Harvest
+							</a>
+					   </li>
+					   <li>
+							<a class="nav-link" href="inventory.html">
+								<img src="../images/material-symbols_inventory-2-rounded.svg">&nbsp;
+								Inventory
+							</a>
+					   </li>
+					   <li>
+							<a class="nav-link" href="settings.html">
+								<img src="../images/material-symbols_settings.svg">&nbsp;
+								Settings
+							</a>
+					   </li>
+					  <li>
+						<a src="logout.html" class="logout nav-link">
+							<img src="../images/Group.svg">&nbsp;
+						Log Out
+						</a>
+					</li>
+					</ul>
+				</div>
+				<a href="dashboard.html" class="dashboardAside_Logo1">
+					<img src="../images/logo.svg">
+				</a>
+			</div>
 			<h1>Dashboard</h1>
 			<div class="dashNavMenu">
-				<p>Jane Doe</p>
-				<img src="../images/UserCircleOutline.svg">
+				<a href="#"><p>Jane Doe</p></a>
+					<a href="#"><img class="menuimg" src="../images/UserCircleOutline.svg">
+				</a>
 				<div class="dropdown">
-  					<button onclick="myFunction()" class="dropbtn">&#8744;</button>
+  					<button class="dropbtn dropdown-button">&#8744;</button>
   					<div id="myDropdown" class="dropdown-content">
     					<a href="#" class="activeDropdown">Farm 1</a>
     					<a href="#">Farm 2</a>
@@ -72,55 +124,6 @@
   					</div>
 				</div>
 			</div>
-			<div class="navbar">
-				<div class="hamburger">
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="bar"></span>
-				</div>
-				<ul class="navbar-menu navMenu">
-				  <li><a class="activeDash nav-link" href="dashboard.html">
-						<img src="../images/Dashboard.svg">&nbsp; Dashboard
-					   </a>
-				   </li>
-				   <li>
-						<a class="nav-link" href="farms.html">
-							<img src="../images/fluent_home-database-24-filled.svg">&nbsp;
-						Farms
-						</a>
-				   </li>
-				   <li>
-						<a class="nav-link" href="batch.html">
-							<img src="../images/material-symbols_set-meal.svg">&nbsp;
-						Batch
-						</a>
-				   </li>
-				   <li>
-						<a class="nav-link" href="harvest.html">
-							<img src="../images/mdi_account-cash.svg">&nbsp;
-							Harvest
-						</a>
-				   </li>
-				   <li>
-						<a class="nav-link" href="inventory.html">
-							<img src="../images/material-symbols_inventory-2-rounded.svg">&nbsp;
-							Inventory
-						</a>
-				   </li>
-				   <li>
-						<a class="nav-link" href="settings.html">
-							<img src="../images/material-symbols_settings.svg">&nbsp;
-							Settings
-						</a>
-				   </li>
-				  <li>
-					<a src="logout.html" class="logout nav-link">
-						<img src="../images/Group.svg">&nbsp;
-					Log Out
-					</a>
-				</li>
-				</ul>
-			  </div>
 		</header>
 		<section class="dashboardWelcome">
 			<img src="../images/Group 11637.svg">
@@ -171,8 +174,8 @@
 			<section class="charts">
 				<div class="contain">
 				    <button id="btn1" class="myButton active">FEATURED</button>
-						<button id="btn2" class="myButton">MORTALITY</button>
-						<button id="btn3" class="myButton">WEIGHT GAIN/LOSS</button>
+					<button id="btn2" class="myButton">MORTALITY</button>
+					<button id="btn3" class="myButton">WEIGHT GAIN/LOSS</button>
 	    		</div>
 	    		<div class="chart section active" id="section1">
 	    			<h4>TITLE</h4>
@@ -211,7 +214,7 @@
 					  <div class="icons">
 						<span id="prev" class="material-symbols">&lt;</span>
 						<p class="current-date"></p>
-						<span id="next" class="material-symbols">&gt;</span>
+						<span id="next" class="material-symbols next">&gt;</span>
 					  </div>
 					</header>
 					<div class="calendar">
@@ -233,7 +236,7 @@
 			<div class="chart-container">
 				<h5>Farm Details</h5>
 				<div class="pie-chart-container">
-					<canvas id="myChart" style="width:100%;max-width:221px;height: 100%; max-height: 221px;"></canvas>
+					<canvas id="myChart"></canvas>
 					<div class="pieLabel">
 						<p class="bar1"><span></span>Total Unit: 3000 units</p>
 						<p class="bar2"><span></span>Batch: Batch 3</p>
