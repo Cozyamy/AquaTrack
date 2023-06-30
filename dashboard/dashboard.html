@@ -230,6 +230,36 @@
 					  <ul class="days"></ul>
 					</div>
 				  </div>
+				<!-- Modal -->
+				<div id="modal" class="modal">
+					<div class="modal-content">
+						<div class="For_closeModal">
+							<h2>Add Task</h2>
+							<p class="close-button">&times;</p>
+						</div>
+					  <div class="calender_addTask">
+						<img src="../images/mdi_calendar-task.svg">
+						<div>
+							<h5>Tasks</h5>
+							<p>janedoe@examplemail.com</p>
+						</div>
+					  </div>
+					  <form class="event-form">
+						<label class="eventForm_label" for="event-description">Description</label>
+						<textarea id="event-description"></textarea>
+
+						<p>Repeat</p>
+						<div>
+							<span><img src="../images/ic_baseline-access-time.svg">&nbsp; Everyday</span>
+							<label class="toggle-btn">
+								<input type="checkbox" checked>
+								<span class="slider"></span>
+							</label>
+						</div>
+						<button type="submit">Add Task</button>
+					  </form>
+					</div>
+				  </div>
 	    	</section>
 		</section>
 		<section class="barChart_section">
@@ -282,5 +312,6 @@
 
 	<script type="text/javascript" src="../js/script.js"></script>
 	<script src="../js/myscript.js"></script>
+	
 </body>
 </html>
