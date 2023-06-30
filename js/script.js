@@ -21,6 +21,21 @@ farmdropdownButton.addEventListener("click", function() {
   farmdropdownButton.classList.toggle("farmdropdown-active");
 });
 
+function updateProgressBar(progressClass, percentage) {
+	const progressBars = document.getElementsByClassName(progressClass);
+	Array.from(progressBars).forEach((progressBar) => {
+	  progressBar.style.width = `${percentage}%`;
+	});
+  }
+  
+  // Update progress for each bar
+  updateProgressBar("progress-1", 90);
+  updateProgressBar("progress-2", 35);
+  updateProgressBar("progress-3", 45);
+  updateProgressBar("progress-4", 80);
+  updateProgressBar("progress-5", 20);
+  
+
 
 
 
