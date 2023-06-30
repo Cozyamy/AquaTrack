@@ -13,11 +13,12 @@ addEventListener('click', () => {
 	navMenu.classList.remove('active');
 }))
 
-const dropdownButton = document.querySelector('.dropdown-button');
-const dropdownContent = document.querySelector('.dropdown-content');
+const farmdropdownButton = document.getElementById("farmdropdown-button");
+const farmdropdownMenu = document.getElementById("farmdropdown-menu");
 
-dropdownButton.addEventListener('click', function() {
-  dropdownContent.classList.toggle('show');
+farmdropdownButton.addEventListener("click", function() {
+  farmdropdownMenu.classList.toggle("farmdropdown-open");
+  farmdropdownButton.classList.toggle("farmdropdown-active");
 });
 
 

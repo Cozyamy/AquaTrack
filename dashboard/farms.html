@@ -22,11 +22,11 @@
 			<img src="../images/logo.svg">
 		</a>
 		<nav>
-			<a class="activeDash nav-link" href="dashboard.html">
+			<a class="nav-link" href="dashboard.html">
 				<img src="../images/Dashboard.svg">&nbsp; 
 				Dashboard
 			</a>
-			<a class="nav-link" href="farms.html">
+			<a class="activeDash nav-link" href="farms.html">
 				<img src="../images/fluent_home-database-24-filled.svg">&nbsp;
 				Farms
 			</a>
@@ -62,12 +62,12 @@
 						<span class="bar"></span>
 					</div>
 					<ul class="navbar-menu navMenu">
-					  <li><a class="activeDash nav-link" href="dashboard.html">
+					  <li><a class="nav-link" href="dashboard.html">
 							<img src="../images/Dashboard.svg">&nbsp; Dashboard
 						   </a>
 					   </li>
 					   <li>
-							<a class="nav-link" href="farms.html">
+							<a class="activeDash nav-link" href="farms.html">
 								<img src="../images/fluent_home-database-24-filled.svg">&nbsp;
 							Farms
 							</a>
@@ -108,39 +108,45 @@
 					<img src="../images/logo.svg">
 				</a>
 			</div>
-			<h1>Dashboard</h1>
+			<div id="farmdropdown-menu">
+                <a href="#" id="farmdropdown-button" class="farm_dropdownbtn">
+                    <p> Farm 1</p>
+                    <p class="arrow"></p>
+                </a>
+                <div id="farmdropdown-content">
+                  <a href="#">Farm 2</a>
+                  <a href="#">Farm 3</a>
+                </div>
+              </div>
+                            
 			<div class="dashNavMenu">
-				<a href="#"><p>Jane Doe</p></a>
-					<a href="#"><img class="menuimg" src="../images/UserCircleOutline.svg">
+				<a href="#"><img class="menuimg" src="../images/UserCircleOutline.svg">
 				</a>
-				<div class="dropdown">
-  					<button class="dropbtn dropdown-button">&#8744;</button>
-  					<div id="myDropdown" class="dropdown-content">
-    					<a href="#" class="activeDropdown">Farm 1</a>
-    					<a href="#">Farm 2</a>
-   	 					<a href="logout.html" class="navLogout">
-   	 						<img src="../images/Group.svg">&nbsp;
-   	 					Log Out</a>
-  					</div>
-				</div>
 			</div>
 		</header>
 		<section class="quick_actions">
             <h1>Quick Actions</h1>
-            <div>
+            <div class="quickActions_Grid">
                 <button>
-                    <img src="../images/Group.svg">&nbsp;
+                    <img src="../images/fluent_home-database-24-filled.svg">&nbsp;
+                    <p>Add New Farm</p>
                 </button>
                 <button>
-                    <img src="../images/Group.svg">&nbsp;
+                    <img src="../images/mdi_storage-tank.svg">&nbsp;
+                    <p>Add New Pond</p>
                 </button>
                 <button>
-                    <img src="../images/Group.svg">&nbsp;
+                    <img src="../images/game-icons_powder-bag.svg">&nbsp;
+                    <p>Add New Feed</p>
                 </button>
                 <button>
-                    <img src="../images/Group.svg">&nbsp;
+                    <img src="../images/game-icons_powder-bag (1).svg">&nbsp;
+                    <p>View New Stats</p>
                 </button>
             </div>
+        </section>
+        <section class="farm_ponds">
+
         </section>
 	</main>
 
