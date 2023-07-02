@@ -2421,8 +2421,8 @@ html {
 
   .pondContainer_header p {
     color: var(--color-primary);
-    font-size: 10px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
     cursor: pointer;
   }
 
@@ -2853,4 +2853,30 @@ html {
   .addpond_btn {
     box-shadow: 0px 2px 58px 0px rgba(255, 255, 255, 0.25);
   }
+
+  .addbatch {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: var(--color-primary);
+    box-shadow: 0px 2px 58px 0px rgba(217, 217, 217, 0.25);
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    border: none;
+  }
    
+  .deletebatch {
+    border-radius: 8px;
+    background: #F84D4D;
+    box-shadow: 0px 2px 58px 0px rgba(217, 217, 217, 0.25);
+    border: none;
+    color: white;
+    font-weight: var(--font-weight-bold);
+    padding: 12px 16px;
+  }
+
+  .batch_header {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    align-items: center;
+  }
