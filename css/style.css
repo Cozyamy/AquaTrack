@@ -694,17 +694,17 @@ html {
 }
 
 .signupmain {
-    padding: 42px 123px;
+    padding: 42px 115px;
     border: 1px solid #0180EA;
     box-shadow: 0px 2px 58px rgba(217, 217, 217, 0.25);
     border-radius: 16px;
     margin: 5% auto;
-    width: 65%;
+    width: 45%;
 }
 
 .signupmain h1 {
     color: var(--color-black);
-    font-size: 36px;
+    font-size: 24px;
     font-weight: var(--font-weight-bold);
     margin-bottom: 40px;
     text-align: center;
@@ -736,13 +736,12 @@ html {
 .signupmain div {
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap:8px;
     margin: 20px 0px;
     align-items: center;
 }
 
 .signupmain div a {
-    margin-left: 190px;
     text-decoration: underline;
     color: var(--color-black);
 }
@@ -752,13 +751,20 @@ html {
 }
 
 .signupmain div input {
-    width: 37px;
+    width: 30px;
     height: 30px;
 }
 
 .signupmain p {
     color: var(--color-black);
-    font-size: 20px;
+    font-size: 16px;
+}
+
+.signup_pDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 14px;
 }
 
 .signupmain button {
@@ -767,7 +773,7 @@ html {
     font-weight: var(--font-weight-bold);
     background-color: var(--color-primary);
     border-radius: 8px;
-    padding: 16px 32px;
+    padding: 10px 24px;
     border: none;
     width: 70%;
     align-self: center;
@@ -775,6 +781,12 @@ html {
 
 .signupNav a {
     color: #0180EA;
+}
+
+.siggnup_pDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .signupNav {
@@ -787,9 +799,7 @@ html {
         padding: 40px 80px;
     }
 
-    .signupmain div a {
-        margin-left: 60px;
-    }
+    
 }
 
 @media only screen and (max-width: 1044px) {
@@ -2547,6 +2557,7 @@ html {
     margin: 50px auto;
     padding: 25px 20px;
     border-radius: 12px;
+    border: none;
   }
 
   .For_closeModals {
@@ -2596,6 +2607,7 @@ html {
     width: 40%;
     justify-content: center;
     align-self: flex-end;
+    border: none;
   }
 
   .add_pond {
@@ -2678,6 +2690,7 @@ html {
   .deletepond_btn button {
     background-color: #F84D4D;
     color: var(--color-white);
+    border: none;
   }
 
   .deletepond_btn button:first-of-type {
@@ -2812,3 +2825,32 @@ html {
       }
     
   }
+
+  /* END OF FARMS PAGE */
+
+  /* START OF BATCH PAGE */
+  .search-container {
+    position: relative;
+  }
+  
+  .search-input {
+    padding: 10px 30px;
+    border-radius: 6px;
+    border: 1px solid rgba(229, 229, 229, 0.50);
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/Search.svg"); /* Replace with your search icon image */
+    background-size: cover;
+  }
+
+  .addpond_btn {
+    box-shadow: 0px 2px 58px 0px rgba(255, 255, 255, 0.25);
+  }
+   
