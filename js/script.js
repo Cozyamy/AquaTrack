@@ -13,12 +13,6 @@ addEventListener('click', () => {
 	navMenu.classList.remove('active');
 }))
 
-const dropdownButton = document.querySelector('.dropdown-button');
-const dropdownContent = document.querySelector('.dropdown-content');
-
-dropdownButton.addEventListener('click', function() {
-  dropdownContent.classList.toggle('show');
-});
 
 const farmdropdownButton = document.getElementById("farmdropdown-button");
 const farmdropdownMenu = document.getElementById("farmdropdown-menu");
@@ -41,6 +35,53 @@ function updateProgressBar(progressClass, percentage) {
   updateProgressBar("progress-3", 45);
   updateProgressBar("progress-4", 80);
   updateProgressBar("progress-5", 20);
+
+
+  const customModalButtons = document.querySelectorAll(".custom-modal-button");
+
+customModalButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modalId = button.dataset.modal;
+    const modal = document.getElementById(modalId);
+    modal.classList.add("active");
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (event.target.classList.contains("custom-modal")) {
+    event.target.classList.remove("active");
+  }
+});
+
+const closeButtons = document.querySelectorAll(".close-buttons");
+
+closeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modal = button.closest(".custom-modal");
+    modal.classList.remove("active");
+  });
+});
+
+const minusButton = document.getElementById("minus-button");
+const plusButton = document.getElementById("plus-button");
+const numberSpan = document.getElementById("number");
+
+let number = 1;
+
+minusButton.addEventListener("click", () => {
+  if (number > 1) {
+    number--;
+    numberSpan.textContent = number;
+  }
+});
+
+plusButton.addEventListener("click", () => {
+  number++;
+  numberSpan.textContent = number;
+});
+
+
+
   
 
 

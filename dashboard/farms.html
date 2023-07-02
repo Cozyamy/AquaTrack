@@ -127,29 +127,162 @@
 		<section class="quick_actions">
             <h1>Quick Actions</h1>
             <div class="quickActions_Grid">
-                <button>
+                <button class="custom-modal-button" data-modal="custom-modal-1">
                     <img src="../images/fluent_home-database-24-filled.svg">&nbsp;
                     <p>Add New Farm</p>
                 </button>
-                <button>
+                <button class="custom-modal-button" data-modal="custom-modal-2">
                     <img src="../images/mdi_storage-tank.svg">&nbsp;
                     <p>Add New Pond</p>
                 </button>
-                <button>
+                <button class="custom-modal-button" data-modal="custom-modal-3">
                     <img src="../images/game-icons_powder-bag.svg">&nbsp;
                     <p>Add New Feed</p>
                 </button>
-                <button>
+                <button class="custom-modal-button" data-modal="custom-modal-4">
                     <img src="../images/game-icons_powder-bag (1).svg">&nbsp;
                     <p>View New Stats</p>
                 </button>
+                <div class="custom-modal" id="custom-modal-1">
+                    <div class="add_NewFarm">
+                        <div class="For_closeModals">
+                            <h2>Add New Farm</h2>
+                            <p class="close-buttons">&times;</p>
+                        </div>
+                        <form>
+                            <label for="farmName">Farm Name</label>
+                            <input type="text">
+                            <label for="farmLocation">Farm Location</label>
+                            <input type="text">
+                            <label for="PondNumber">Number of Ponds</label>
+                            <input type="text">
+                            <label for="dateEstablished">Date Established</label>
+                            <input type="text">
+                            <button type="submit">Add Farm</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="custom-modal" id="custom-modal-2">
+                    <div class="add_NewFarm">
+                        <div class="For_closeModals">
+                            <h2>Add New Pond</h2>
+                            <p class="close-buttons">&times;</p>
+                        </div>
+                        <form>
+                            <label for="farmName">Pond Name</label>
+                            <input type="text">
+                            <label for="farmLocation">Pond Type</label>
+                            <input type="text">
+                            <label for="PondNumber">Lenght</label>
+                            <input type="text">
+                            <label for="dateEstablished">Fish Holding Capacity</label>
+                            <input type="text">
+                            <button type="submit">Add Pond</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="custom-modal" id="custom-modal-3">
+                    <div class="add_NewFarm add_pond">
+                        <div class="For_closeModals">
+                            <h2>Add New Feed</h2>
+                            <p class="close-buttons">&times;</p>
+                        </div>
+                        <div class="addpond_regulator">
+                            <p id="minus-button">-</p>
+                            <span id="number">1</span>
+                            <p id="plus-button">+</p>
+                        </div>
+                        <button>Add</button>                          
+                    </div>
+                </div>
+                <div class="custom-modal" id="custom-modal-4">
+                    <div class="add_NewFarm pondStats">
+                        <div class="For_closeModals">
+                            <h2>Farm Statistics</h2>
+                            <p class="close-buttons">&times;</p>
+                        </div>
+                        <form>
+                            <div>
+                                <label for="pondname">Pond</label>
+                                <input type="text" placeholder="Six(6)">
+                            </div>
+                            <div>
+                                <label for="totalfish">Total Fish</label>
+                                <input type="text" placeholder="3000 Unit">
+                            </div>
+                            <div>
+                                <label for="mortalityrate">Mortality rate</label>
+                                <input type="text" placeholder="200 Unit">
+                            </div>
+                            <div>
+                                <label for="feedavailable">Feed Available</label>
+                                <input type="text" placeholder="50 Bags">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="custom-modal" id="custom-modal-5">
+                    <div class="add_NewFarm pondStats">
+                        <div class="For_closeModals">
+                            <h2>Pond 1</h2>
+                            <p class="close-buttons">&times;</p>
+                        </div>
+                        <form>
+                            <div>
+                                <label for="pondname">Unit</label>
+                                <input type="text" placeholder="200">
+                            </div>
+                            <div>
+                                <label for="totalfish">Feed Size</label>
+                                <input type="text" placeholder="6mm">
+                            </div>
+                            <div>
+                                <label for="mortalityrate">Size</label>
+                                <input type="text" placeholder="1kg">
+                            </div>
+                            <div>
+                                <label for="feedavailable">Pond Type</label>
+                                <input type="text" placeholder="Tank">
+                            </div>
+                            <div>
+                                <label for="feedavailable">Capacity</label>
+                                <input type="text" placeholder="500">
+                            </div>
+                            <div>
+                                <label for="feedavailable">Status</label>
+                                <input type="text" placeholder="Healthy">
+                            </div>
+                            <div>
+                                <label for="feedavailable">Water Quality</label>
+                                <input type="text" placeholder="Clean">
+                            </div>
+                        </form>
+                        <div  class="viewstat_btn">
+                            <button class="custom-modal-button" data-modal="custom-modal-6"> Delete pond 1</button>
+                            <button>Save changes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-modal" id="custom-modal-6">
+                    <div class="add_NewFarm pondStats">
+                        <div class="For_closeModals">
+                            <h2>Delete Pond 1</h2>
+                            <p class="close-buttons">&times;</p>
+                        </div>
+                        <h3>You are about to delete this pondforever. Are you really sure about this?</h3>
+                        <div  class="viewstat_btn">
+                            <button class="close-buttons">Cancel</button>
+                            <button>Delete</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="farm_ponds">
             <section class="pond_containers">
                 <div class="pondContainer_header">
                     <h2>Green Pond</h2>
-                    <p>View details</p>
+                    <p class="custom-modal-button" data-modal="custom-modal-5">View details</p>
                 </div>
                 <div class="pondContainer_contents">
                     <div  class="pondContainer_contents1">
@@ -192,7 +325,7 @@
             <section class="pond_containers">
                 <div class="pondContainer_header">
                     <h2>Green Pond</h2>
-                    <p>View details</p>
+                    <p class="custom-modal-button" data-modal="custom-modal-5">View details</p>
                 </div>
                 <div class="pondContainer_contents">
                     <div  class="pondContainer_contents1">
@@ -235,7 +368,7 @@
             <section class="pond_containers">
                 <div class="pondContainer_header">
                     <h2>Green Pond</h2>
-                    <p>View details</p>
+                    <p class="custom-modal-button" data-modal="custom-modal-5">View details</p>
                 </div>
                 <div class="pondContainer_contents">
                     <div  class="pondContainer_contents1">
@@ -278,7 +411,7 @@
             <section class="pond_containers">
                 <div class="pondContainer_header">
                     <h2>Green Pond</h2>
-                    <p>View details</p>
+                    <p class="custom-modal-button" data-modal="custom-modal-5">View details</p>
                 </div>
                 <div class="pondContainer_contents">
                     <div  class="pondContainer_contents1">
@@ -321,7 +454,7 @@
             <section class="pond_containers">
                 <div class="pondContainer_header">
                     <h2>Green Pond</h2>
-                    <p>View details</p>
+                    <p class="custom-modal-button" data-modal="custom-modal-5">View details</p>
                 </div>
                 <div class="pondContainer_contents">
                     <div  class="pondContainer_contents1">
@@ -364,7 +497,7 @@
             <section class="pond_containers">
                 <div class="pondContainer_header">
                     <h2>Green Pond</h2>
-                    <p>View details</p>
+                    <p class="custom-modal-button" data-modal="custom-modal-5">View details</p>
                 </div>
                 <div class="pondContainer_contents">
                     <div  class="pondContainer_contents1">
@@ -409,5 +542,6 @@
 
 	<script type="text/javascript" src="../js/script.js"></script>
 	<script src="../js/myscript.js"></script>
+    <script src="../js/popupscript.js"></script>
 </body>
 </html>
