@@ -2656,7 +2656,7 @@ html {
     font-size: 16px;
   }
 
-  .viewstat_btn {
+  .viewstat_btn, .deletepond_btn {
     display: flex;
     flex-direction: row;
     gap: 15%;
@@ -2668,7 +2668,23 @@ html {
     border: 1px solid var(--color-primary);
     color: var(--color-primary);
   }
-  
+
+  .deletepond_h3 {
+    font-weight: var(--font-weight-regular);
+    text-align: center;
+    color: #7C8DB5;
+  }
+
+  .deletepond_btn button {
+    background-color: #F84D4D;
+    color: var(--color-white);
+  }
+
+  .deletepond_btn button:first-of-type {
+    background-color: var(--color-white);
+    border: 1px solid #F84D4D;
+    color: #F84D4D;
+  }
   
   @media only screen and (max-width: 1115px) {
     .quickActions_Grid, .farm_ponds {
@@ -2710,6 +2726,32 @@ html {
     .farm_dashNavMenu img {
         width: 50%;
         height: auto;
+    }
+
+    .add_NewFarm {
+        max-width: 300px;
+    }
+
+    .pondStats input {
+        width: 90%;
+      }
+
+    .add_NewFarm button {
+        width: 50%;
+    }
+
+    .For_closeModals {
+        justify-content: space-between;
+        gap: 24%;
+    }
+
+    .pondStats form{
+        gap: 10px;
+    }
+
+    .pondStats button {
+        font-size: var(--font-size-small);
+        padding: 5px 8px;
     }
 
   }
