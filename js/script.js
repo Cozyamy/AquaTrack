@@ -22,6 +22,26 @@ farmdropdownButton.addEventListener("click", function() {
   farmdropdownButton.classList.toggle("farmdropdown-active");
 });
 
+const batchdropdownBtns = document.querySelectorAll('.batchdropdown-btn');
+
+batchdropdownBtns.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    const batchdropdown = this.parentNode;
+    batchdropdown.classList.toggle('show');
+  });
+});
+
+// Optional: Close dropdown when clicking outside
+window.addEventListener('click', function(event) {
+  batchdropdownBtns.forEach(function(btn) {
+    const batchdropdown = btn.parentNode;
+    if (!batchdropdown.contains(event.target)) {
+      batchdropdown.classList.remove('show');
+    }
+  });
+});
+
+
 function updateProgressBar(progressClass, percentage) {
 	const progressBars = document.getElementsByClassName(progressClass);
 	Array.from(progressBars).forEach((progressBar) => {

@@ -143,52 +143,88 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <button class="addbatch custom-modal-button" data-modal="custom-modal-5">+ Add new batch</button>
+            <div class="filter_buttons">
+                <button class="addbatch custom-modal-button" data-modal="custom-modal-5"><span>+ </span> Add new batch</button>
                 <button class="deletebatch custom-modal-button" data-modal="custom-modal-6">Delete</button>
             </div>
             <div class="custom-modal" id="custom-modal-5">
                 <div class="add_NewFarm pondStats">
                     <div class="For_closeModals">
-                        <h2>Pond 1</h2>
+                        <h2>Create New Batch</h2>
                         <p class="close-buttons">&times;</p>
                     </div>
                     <form>
                         <div>
-                            <label for="pondname">Unit</label>
-                            <input type="text" placeholder="200">
+                            <label for="pondname">Batch Name</label>
+                            <input type="text">
                         </div>
                         <div>
-                            <label for="totalfish">Feed Size</label>
-                            <input type="text" placeholder="6mm">
+                            <label for="totalfish">Units Purchased</label>
+                            <input type="text">
                         </div>
                         <div>
-                            <label for="mortalityrate">Size</label>
-                            <input type="text" placeholder="1kg">
+                            <label for="mortalityrate">Price Per Unit</label>
+                            <input type="text">
                         </div>
                         <div>
-                            <label for="feedavailable">Pond Type</label>
-                            <input type="text" placeholder="Tank">
+                            <label for="feedavailable">Amount Spent</label>
+                            <input type="text">
                         </div>
                         <div>
-                            <label for="feedavailable">Capacity</label>
-                            <input type="text" placeholder="500">
+                            <label for="feedavailable">Fish Type</label>
+                            <input type="text">
                         </div>
                         <div>
-                            <label for="feedavailable">Status</label>
-                            <input type="text" placeholder="Healthy">
-                        </div>
-                        <div>
-                            <label for="feedavailable">Water Quality</label>
-                            <input type="text" placeholder="Clean">
+                            <label for="feedavailable">Vendor</label>
+                            <input type="text">
                         </div>
                     </form>
-                    <div  class="viewstat_btn">
-                        <button class="custom-modal-button" data-modal="custom-modal-6">Delete pond 1</button>
-                        <button class="addpond_btn">Save changes</button>
+                    <div  class="batch_createbtn">
+                        <button class="addpond_btn">Create Batch</button>
                     </div>
                 </div>
             </div>
+			<div class="custom-modal" id="custom-modal-4">
+				<div class="add_NewFarm pondStats">
+					<div class="For_closeModals edit_batch">
+						<h2>Edit</h2>
+						<p class="close-buttons">&times;</p>
+					</div>
+					<form>
+						<div>
+							<label for="pondname">Batch Name</label>
+							<input type="text" placeholder="Batch 7">
+						</div>
+						<div>
+							<label for="totalfish">Units Purchased</label>
+							<input type="text" placeholder="3000 units">
+						</div>
+						<div>
+							<label for="mortalityrate">Price per unit</label>
+							<input type="text" placeholder="50/unit">
+						</div>
+						<div>
+							<label for="feedavailable">Amount Spent</label>
+							<input type="text" placeholder="100.000">
+						</div>
+						<div>
+							<label for="feedavailable">Fish type</label>
+							<input type="text" placeholder="Fingerlings">
+						</div>
+						<div>
+							<label for="feedavailable">Status</label>
+							<input type="text" placeholder="In Stock">
+						</div>
+						<div>
+							<label for="feedavailable">Vendor</label>
+							<input type="text" placeholder="Evergreen farm">
+						</div>
+					</form>
+					<div  class="batch_createbtn">
+                        <button class="addpond_btn">Save Changes</button>
+                    </div>
+				</div>
+			</div>
             <div class="custom-modal" id="custom-modal-6">
                 <div class="add_NewFarm pondStats">
                     <div class="For_closeModals">
@@ -203,6 +239,149 @@
                 </div>
             </div>
         </section>
+		<section class="batch_tables">
+			<div class="table-container">
+				<table>
+				  <thead>
+					<tr>
+					  <th><input type="checkbox" name="checkbox"></th>
+					  <th>Date</th>
+					  <th>Name</th>
+					  <th>Unit Purchased</th>
+					  <th>Fish Type</th>
+					  <th>Status</th>
+					  <th></th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td><input type="checkbox" name="checkbox"></td>
+					  <td>20/12/2023</td>
+					  <td>Batch 1</td>
+					  <td>3000 units</td>
+					  <td>Fingerlings</td>
+					  <td class="instock"><p>In stock</p></td>
+					  <td>
+						<div class="batchdropdown">
+							<button class="batchdropdown-btn">&#10247</button>
+							<div class="batchdropdown-content">
+							  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+							  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+							</div>
+						</div>
+					  </td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="checkbox"></td>
+						<td>20/12/2023</td>
+						<td>Batch 1</td>
+						<td>3000 units</td>
+						<td>Fingerlings</td>
+						<td class="instock"><p>In stock</p></td>
+						<td>
+							<div class="batchdropdown">
+								<button class="batchdropdown-btn">&#10247</button>
+								<div class="batchdropdown-content">
+								  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+								  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+								</div>
+							  </div>
+						</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="checkbox"></td>
+						<td>20/12/2023</td>
+						<td>Batch 1</td>
+						<td>3000 units</td>
+						<td>Fingerlings</td>
+						<td class="instock"><p>In stock</p></td>
+						<td>
+							<div class="batchdropdown">
+								<button class="batchdropdown-btn">&#10247</button>
+								<div class="batchdropdown-content">
+								  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+								  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+								</div>
+							</div>
+						</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="checkbox"></td>
+						<td>20/12/2023</td>
+						<td>Batch 1</td>
+						<td>3000 units</td>
+						<td>Fingerlings</td>
+						<td class="soldout"><p>Sold Out</p></td>
+						<td>
+							<div class="batchdropdown">
+								<button class="batchdropdown-btn">&#10247</button>
+								<div class="batchdropdown-content">
+								  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+								  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+								</div>
+							</div>
+						</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="checkbox"></td>
+						<td>20/12/2023</td>
+						<td>Batch 1</td>
+						<td>3000 units</td>
+						<td>Fingerlings</td>
+						<td class="soldout"><p>Sold Out</p></td>
+						<td>
+							<div class="batchdropdown">
+								<button class="batchdropdown-btn">&#10247</button>
+								<div class="batchdropdown-content">
+								  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+								  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+								</div>
+							</div>
+						</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="checkbox"></td>
+						<td>20/12/2023</td>
+						<td>Batch 1</td>
+						<td>3000 units</td>
+						<td>Fingerlings</td>
+						<td class="soldout"><p>Sold Out</p></td>
+						<td>
+							<div class="batchdropdown">
+								<button class="batchdropdown-btn">&#10247</button>
+								<div class="batchdropdown-content">
+								  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+								  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+								</div>
+							</div>
+						</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="checkbox"></td>
+						<td>20/12/2023</td>
+						<td>Batch 1</td>
+						<td>3000 units</td>
+						<td>Fingerlings</td>
+						<td class="soldout"><p>Sold Out</p></td>
+						<td>
+							<div class="batchdropdown">
+								<button class="batchdropdown-btn">&#10247</button>
+								<div class="batchdropdown-content">
+								  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+								  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+								</div>
+							</div>
+						</td>
+					  </tr>
+				  </tbody>
+				</table>
+			  </div>
+			  <div class="showmore_tables">
+				<p>Showing 1 - 5 of 24</p>
+				<button>&lt;</button>
+				<button>&gt;</button>
+			  </div>
+		</section>
 	</main>
 
 	<script type="text/javascript" src="../js/script.js"></script>
