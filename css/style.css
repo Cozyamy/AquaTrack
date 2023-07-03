@@ -581,6 +581,7 @@ html {
     padding-bottom: 1%;
     align-items: flex-start;
     transition: 0.3s;
+    z-index: 2;
   }
 
   .navMenu.active {
@@ -2919,12 +2920,16 @@ html {
     border-right: 2px solid #12263F !important;
   }
 
-  .batch_header {
-    display: grid;
-    grid-template-areas: 'searchArea searchArea searchArea filterArea .';
-    gap: 20px;
-    margin: 30px 31px;
-  }
+  .batcharea1 { grid-area: header;}
+    .batcharea2 { grid-area: main;}
+    .batcharea3 { grid-area: footer;}
+
+    .batch_header {
+        display: grid;
+        grid-template-areas: 'header header main footer';
+        gap: 20px;
+        margin: 30px 31px;
+    }
 
   .filter_buttons {
     display: flex;
@@ -3069,7 +3074,7 @@ html {
 
     .batch_header {
         display: grid;
-        grid-template-areas: 'searchArea filterArea';
+        grid-template-areas: 'header header main' 'footer footer footer';
     }
 
     .batchdropdown-content {
@@ -3092,7 +3097,34 @@ html {
     }
 
     .search-input {
-        width: 70%;
+        width: 100%;
     }
+
+    .instock p {
+        width: 100%;
+    }
+
+    .soldout p {
+        width: 100%;
+    }
+   
+  }
+
+  @media (max-width: 500px) {
+    .batch_header {
+        display: grid;
+        grid-template-areas: 'header header header' 'main main main' 'footer footer footer';
+    }
+
+    .addbatch {
+        padding: 8px 10px;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+       
+      .deletebatch {
+        padding: 8px 10px;
+        font-size: 14px;
+      }
   }
   
