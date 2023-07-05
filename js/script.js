@@ -101,6 +101,35 @@ plusButton.addEventListener("click", () => {
 });
 
 
+const navButtons = document.querySelectorAll('.nav-button');
+const contentDivs = document.querySelectorAll('.content');
+
+navButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const target = button.dataset.target;
+    showContent(target);
+  });
+});
+
+function showContent(target) {
+  contentDivs.forEach((div) => {
+    if (div.id === target) {
+      div.style.display = 'block';
+    } else {
+      div.style.display = 'none';
+    }
+  });
+
+  navButtons.forEach((button) => {
+    if (button.dataset.target === target) {
+      button.classList.add('active');
+    } else {
+      button.classList.remove('active');
+    }
+  });
+}
+
+
 
   
 
