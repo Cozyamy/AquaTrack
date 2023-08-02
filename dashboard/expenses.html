@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Harvest - Aquatrack</title>
+    <title>Inventory - Aquatrack</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" type="image/svg" sizes="32x32" href="../images/logo.svg">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,11 +33,11 @@
 				<img src="../images/material-symbols_set-meal.svg">&nbsp;
 				Batch
 			</a>
-			<a class="activeDash nav-link" href="harvest.html">
+			<a class="nav-link" href="harvest.html">
 				<img src="../images/mdi_account-cash.svg">&nbsp;
 				Harvest
 			</a>
-			<a class="nav-link" href="inventory.html">
+			<a class="activeDash nav-link" href="inventory.html">
 				<img src="../images/material-symbols_inventory-2-rounded.svg">&nbsp;
 				Inventory
 			</a>
@@ -78,13 +78,13 @@
 							</a>
 					   </li>
 					   <li>
-							<a class="activeDash nav-link" href="harvest.html">
+							<a class="nav-link" href="harvest.html">
 								<img src="../images/mdi_account-cash.svg">&nbsp;
 								Harvest
 							</a>
 					   </li>
 					   <li>
-							<a class="nav-link" href="inventory.html">
+							<a class="activeDash nav-link" href="inventory.html">
 								<img src="../images/material-symbols_inventory-2-rounded.svg">&nbsp;
 								Inventory
 							</a>
@@ -107,7 +107,7 @@
 					<img src="../images/logo.svg">
 				</a>
 			</div>
-			<h1>Harvest</h1>
+			<h1>Inventory</h1>
 			<div class="dashNavMenu">
 				<a href="settings.html"><p>Jane Doe</p></a>
 					<a href="settings.html"><img class="menuimg" src="../images/UserCircleOutline.svg">
@@ -124,6 +124,24 @@
 				</div>
 			</div>
 		</header>
+        <section class="inventory_initialSection">
+            <div class="contain contain_inventory">
+                <button id="btn5" class="myButton">Feed Records</button>
+                <button id="btn6" class="myButton active">Expenses</button>
+                <button id="btn7" class="myButton">Employees</button>
+                <button id="btn8" class="myButton">Customers</button>
+            </div>
+            <div id="inventorydropdown-menu">
+                <a href="#" id="inventorydropdown-button" class="inventory_dropdownbtn">
+                    <p class="ActiveInventory_p"> Batch 7</p>
+                    <p class="arrow"></p>
+                </a>
+                <div id="inventorydropdown-content">
+                    <a href="#">Batch 6</a>
+                    <a href="#">Batch 5</a>
+                </div>
+            </div>
+        </section>
         <section class="harvest_Grid">
             <article>
                 <div class="harvest-gridDiv">
@@ -199,57 +217,104 @@
                 <p>Filter by</p>
                 <div id="farmdropdown-menu">
                     <a href="#" id="farmdropdown-button" class="farm_dropdownbtn">
-                        <p> Name</p>
+                        <p> Date</p>
                         <p class="arrow"></p>
                     </a>
                     <div id="farmdropdown-content">
-                      <a href="#">Date</a>
+                      <a href="#">Name</a>
                       <a href="#">Fish Type</a>
                     </div>
                 </div>
             </div>
             <div class="filter_buttons batcharea3">
-                <button class="addbatch custom-modal-button" data-modal="custom-modal-5"><span>+ </span> Add new harvest</button>
+                <button class="addbatch custom-modal-button" data-modal="custom-modal-5"><span>+ </span> Add new Purchase</button>
                 <button class="deletebatch custom-modal-button" data-modal="custom-modal-6">Delete</button>
             </div>
             <div class="custom-modal" id="custom-modal-5">
-                <div class="addHarvest">
+                <div class="add_NewFarm pondStats">
                     <div class="For_closeModals">
-                        <h2>Create New Harvest</h2>
+                        <h2>Create New Feed Purchase</h2>
                         <p class="close-buttons">&times;</p>
                     </div>
                     <form>
                         <div>
-                            <label for="pondname">Harvest Name</label>
+                            <label for="pondname">Brand Name</label>
                             <input type="text">
                         </div>
                         <div>
-                            <label for="totalfish">Number of customers</label>
+                            <label for="totalfish">Quantity</label>
                             <input type="text">
                         </div>
                         <div>
-                            <label for="mortalityrate">fish market size</label>
+                            <label for="mortalityrate">Size</label>
                             <input type="text">
                         </div>
                         <div>
-                            <label for="feedavailable">Consultant</label>
+                            <label for="feedavailable">Amount Spent</label>
                             <input type="text">
                         </div>
                         <div>
                             <label for="feedavailable">Batch</label>
                             <input type="text">
                         </div>
+                        <div>
+                            <label for="feedavailable">Vendor</label>
+                            <input type="text">
+                        </div>
                     </form>
-                    <button class="addHarvest_btn">Add Harvest</button>
+                    <div  class="batch_createbtn">
+                        <button class="addpond_btn">Add Purchase</button>
+                    </div>
                 </div>
             </div>
+			<div class="custom-modal" id="custom-modal-4">
+				<div class="add_NewFarm pondStats">
+					<div class="For_closeModals edit_batch">
+						<h2>Edit</h2>
+						<p class="close-buttons">&times;</p>
+					</div>
+					<form>
+						<div>
+							<label for="pondname">Brand Name</label>
+							<input type="text" placeholder="Aler Aqua">
+						</div>
+						<div>
+							<label for="totalfish">Quantity</label>
+							<input type="text" placeholder="20 bags">
+						</div>
+						<div>
+							<label for="mortalityrate">Size</label>
+							<input type="text" placeholder="9mm">
+						</div>
+						<div>
+							<label for="feedavailable">Amount Spent</label>
+							<input type="text" placeholder="100.000">
+						</div>
+						<div>
+							<label for="feedavailable">Batch</label>
+							<input type="text" placeholder="Batch 7">
+						</div>
+						<div>
+							<label for="feedavailable">Status</label>
+							<input type="text" placeholder="In Stock">
+						</div>
+						<div>
+							<label for="feedavailable">Vendor</label>
+							<input type="text" placeholder="FishFeeds.inc">
+						</div>
+					</form>
+					<div  class="batch_createbtn">
+                        <button class="addpond_btn">Save Changes</button>
+                    </div>
+				</div>
+			</div>
             <div class="custom-modal" id="custom-modal-6">
                 <div class="add_NewFarm pondStats">
                     <div class="For_closeModals">
-                        <h2>Delete Harvest</h2>
+                        <h2>Delete Feed</h2>
                         <p class="close-buttons">&times;</p>
                     </div>
-                    <h3 class="deletepond_h3">You are about to delete this harvest forever. Are you really sure about this?</h3>
+                    <h3 class="deletepond_h3">You are about to delete this feed record forever. Are you really sure about this?</h3>
                     <div  class="deletepond_btn">
                         <button class="close-buttons">Cancel</button>
                         <button>Delete</button>
@@ -258,263 +323,153 @@
             </div>
         </section>
 		<section class="batch_tables">
-            <div class="HarvestOne">
-                <div class="table-container">
-                    <div class="harvestTable_Header">
-                        <h4>Harvest 4</h4>
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M14 7V8H8V14H7V8H1V7H7V1H8V7H14Z" fill="#02579E" stroke="#02579E"/>
-                            </svg>
-                            Insert new customer row
-                        </button>
-                    </div>
-                    <table>
-                    <thead>
-                        <tr>
-                        <th><input type="checkbox" name="checkbox" checked></th>
-                        <th>Customer</th>
-                        <th>Price/unit</th>
-                        <th>Size (kg)</th>
-                        <th>Pieces</th>
-                        <th>Amount</th>
-                        <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Paid</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Pay</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Paid</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Paid</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Pay</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Paid</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Pay</button>
-                            </td>
-                        </tr>
-                        
-                    </tbody>
-                    </table>
-                </div>
-                <section class="showmore_tables showmore_tablesHarvest">
-                    <p>Previous Harvests</p>
-                    <button class="HarvestPrevious"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="12" fill="#FAFAFA"/>
-                        <path d="M15 16.2866L11.25 12.003L15 7.71943L14.25 6.006L9 12.003L14.25 18L15 16.2866Z" fill="#02579E"/>
-                    </svg></button>
-                    <button class="HarvestNext"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="12" fill="#FAFAFA"/>
-                        <path d="M9 16.2866L12.75 12.003L9 7.71943L9.75 6.006L15 12.003L9.75 18L9 16.2866Z" fill="#02579E"/>
-                    </svg></button>
-                </section>
-            </div>
-            <div class="HarvestTwo hidden">
-                <div class="table-container">
-                    <div class="harvestTable_Header">
-                        <h4>Harvest 3</h4>
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M14 7V8H8V14H7V8H1V7H7V1H8V7H14Z" fill="#02579E" stroke="#02579E"/>
-                            </svg>
-                            Insert new customer row
-                        </button>
-                    </div>
-                    <table>
-                    <thead>
-                        <tr>
-                        <th><input type="checkbox" name="checkbox" checked></th>
-                        <th>Customer</th>
-                        <th>Price/unit</th>
-                        <th>Size (kg)</th>
-                        <th>Pieces</th>
-                        <th>Amount</th>
-                        <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Paid</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Paid</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Paid</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Paid</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Paid</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Paid</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Paid</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Paid</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="checkbox" checked></td>
-                            <td>Jane Doe</td>
-                            <td>1200</td>
-                            <td>50 (kg)</td>
-                            <td>50 pcs</td>
-                            <td>60,000</td>
-                            <td>
-                                <button id="paymentButton" class="pay">Paid</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                    </table>
-                </div>
-                <section class="showmore_tables showmore_tablesHarvest">
-                    <p>Back</p>
-                    <button class="HarvestPrevious"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="12" fill="#FAFAFA"/>
-                        <path d="M15 16.2866L11.25 12.003L15 7.71943L14.25 6.006L9 12.003L14.25 18L15 16.2866Z" fill="#02579E"/>
-                    </svg></button>
-                    <button class="HarvestNext"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="12" fill="#FAFAFA"/>
-                        <path d="M9 16.2866L12.75 12.003L9 7.71943L9.75 6.006L15 12.003L9.75 18L9 16.2866Z" fill="#02579E"/>
-                    </svg></button>
-                    <p>Next</p>
-                </section>
-            </div>
-            
+			<div class="table-container">
+				<table>
+				  <thead>
+					<tr>
+					  <th><input type="checkbox" name="checkbox"></th>
+					  <th>Date</th>
+					  <th>Brand</th>
+					  <th>size (mm)</th>
+					  <th>Quantity</th>
+					  <th>Status</th>
+					  <th></th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td><input type="checkbox" name="checkbox"></td>
+					  <td>20/12/2023</td>
+					  <td>Aller Aqua</td>
+					  <td>9mm</td>
+					  <td>20 Bags</td>
+					  <td class="instock"><p>In stock</p></td>
+					  <td>
+						<div class="batchdropdown">
+							<button class="batchdropdown-btn">&#10247</button>
+							<div class="batchdropdown-content">
+							  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+							  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+							</div>
+						</div>
+					  </td>
+					</tr>
+					<tr>
+                        <td><input type="checkbox" name="checkbox"></td>
+                        <td>20/12/2023</td>
+                        <td>Aller Aqua</td>
+                        <td>9mm</td>
+                        <td>20 Bags</td>
+                        <td class="instock"><p>In stock</p></td>
+                        <td>
+                          <div class="batchdropdown">
+                              <button class="batchdropdown-btn">&#10247</button>
+                              <div class="batchdropdown-content">
+                                <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+                                <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="checkbox"></td>
+                        <td>20/12/2023</td>
+                        <td>Aller Aqua</td>
+                        <td>9mm</td>
+                        <td>20 Bags</td>
+                        <td class="instock"><p>In stock</p></td>
+                        <td>
+                          <div class="batchdropdown">
+                              <button class="batchdropdown-btn">&#10247</button>
+                              <div class="batchdropdown-content">
+                                <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+                                <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="checkbox"></td>
+                        <td>20/12/2023</td>
+                        <td>Aller Aqua</td>
+                        <td>9mm</td>
+                        <td>20 Bags</td>
+                        <td class="soldout"><p>In stock</p></td>
+                        <td>
+                          <div class="batchdropdown">
+                              <button class="batchdropdown-btn">&#10247</button>
+                              <div class="batchdropdown-content">
+                                <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+                                <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
+					  <tr>
+                        <td><input type="checkbox" name="checkbox"></td>
+                        <td>20/12/2023</td>
+                        <td>Aller Aqua</td>
+                        <td>9mm</td>
+                        <td>20 Bags</td>
+                        <td class="soldout"><p>In stock</p></td>
+                        <td>
+                          <div class="batchdropdown">
+                              <button class="batchdropdown-btn">&#10247</button>
+                              <div class="batchdropdown-content">
+                                <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+                                <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="checkbox"></td>
+                        <td>20/12/2023</td>
+                        <td>Aller Aqua</td>
+                        <td>9mm</td>
+                        <td>20 Bags</td>
+                        <td class="soldout"><p>In stock</p></td>
+                        <td>
+                          <div class="batchdropdown">
+                              <button class="batchdropdown-btn">&#10247</button>
+                              <div class="batchdropdown-content">
+                                <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+                                <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="checkbox"></td>
+                        <td>20/12/2023</td>
+                        <td>Aller Aqua</td>
+                        <td>9mm</td>
+                        <td>20 Bags</td>
+                        <td class="soldout"><p>In stock</p></td>
+                        <td>
+                          <div class="batchdropdown">
+                              <button class="batchdropdown-btn">&#10247</button>
+                              <div class="batchdropdown-content">
+                                <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+                                <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
+				  </tbody>
+				</table>
+			  </div>
+			  <div class="showmore_tables">
+				<p>Showing 1 - 5 of 24</p>
+				<button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="12" fill="#FAFAFA"/>
+                    <path d="M15 16.2866L11.25 12.003L15 7.71943L14.25 6.006L9 12.003L14.25 18L15 16.2866Z" fill="#02579E"/>
+                  </svg></button>
+				<button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="12" fill="#FAFAFA"/>
+                    <path d="M9 16.2866L12.75 12.003L9 7.71943L9.75 6.006L15 12.003L9.75 18L9 16.2866Z" fill="#02579E"/>
+                  </svg></button>
+			  </div>
 		</section>
 	</main>
 

@@ -3,14 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Batch - Aquatrack</title>
+    <title>Inventory - Aquatrack</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="icon" type="image/svg" sizes="32x32" href="../images/logo.svg">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="../js/scripts.js" defer></script>
 	<style>
 	@import url('https://fonts.cdnfonts.com/css/montserrat');
@@ -31,7 +29,7 @@
 				<img src="../images/farms.svg">&nbsp;
 				Farms
 			</a>
-			<a class="activeDash nav-link" href="batch.html">
+			<a class="nav-link" href="batch.html">
 				<img src="../images/material-symbols_set-meal.svg">&nbsp;
 				Batch
 			</a>
@@ -39,7 +37,7 @@
 				<img src="../images/mdi_account-cash.svg">&nbsp;
 				Harvest
 			</a>
-			<a class="nav-link" href="inventory.html">
+			<a class="activeDash nav-link" href="inventory.html">
 				<img src="../images/material-symbols_inventory-2-rounded.svg">&nbsp;
 				Inventory
 			</a>
@@ -74,7 +72,7 @@
 							</a>
 					   </li>
 					   <li>
-							<a class="activeDash nav-link" href="batch.html">
+							<a class="nav-link" href="batch.html">
 								<img src="../images/material-symbols_set-meal.svg">&nbsp;
 							Batch
 							</a>
@@ -86,7 +84,7 @@
 							</a>
 					   </li>
 					   <li>
-							<a class="nav-link" href="inventory.html">
+							<a class="activeDash nav-link" href="inventory.html">
 								<img src="../images/material-symbols_inventory-2-rounded.svg">&nbsp;
 								Inventory
 							</a>
@@ -109,7 +107,7 @@
 					<img src="../images/logo.svg">
 				</a>
 			</div>
-			<h1>Batch</h1>
+			<h1>Inventory</h1>
 			<div class="dashNavMenu">
 				<a href="settings.html"><p>Jane Doe</p></a>
 					<a href="settings.html"><img class="menuimg" src="../images/UserCircleOutline.svg">
@@ -126,6 +124,24 @@
 				</div>
 			</div>
 		</header>
+        <section class="inventory_initialSection">
+            <div class="contain contain_inventory">
+                <button id="btn5" class="myButton active">Feed Records</button>
+                <button id="btn6" class="myButton">Expenses</button>
+                <button id="btn7" class="myButton">Employees</button>
+                <button id="btn8" class="myButton">Customers</button>
+            </div>
+            <div id="inventorydropdown-menu">
+                <a href="#" id="inventorydropdown-button" class="inventory_dropdownbtn">
+                    <p class="ActiveInventory_p"> Batch 7</p>
+                    <p class="arrow"></p>
+                </a>
+                <div id="inventorydropdown-content">
+                    <a href="#">Batch 6</a>
+                    <a href="#">Batch 5</a>
+                </div>
+            </div>
+        </section>
         <section class="batch_header">
             <div class="search-container batcharea1">
                 <input type="text" class="search-input" placeholder="Search" />
@@ -145,26 +161,26 @@
                 </div>
             </div>
             <div class="filter_buttons batcharea3">
-                <button class="addbatch custom-modal-button" data-modal="custom-modal-5"><span>+ </span> Add new batch</button>
+                <button class="addbatch custom-modal-button" data-modal="custom-modal-5"><span>+ </span> Add new Purchase</button>
                 <button class="deletebatch custom-modal-button" data-modal="custom-modal-6">Delete</button>
             </div>
             <div class="custom-modal" id="custom-modal-5">
                 <div class="add_NewFarm pondStats">
                     <div class="For_closeModals">
-                        <h2>Create New Batch</h2>
+                        <h2>Create New Feed Purchase</h2>
                         <p class="close-buttons">&times;</p>
                     </div>
                     <form>
                         <div>
-                            <label for="pondname">Batch Name</label>
+                            <label for="pondname">Brand Name</label>
                             <input type="text">
                         </div>
                         <div>
-                            <label for="totalfish">Units Purchased</label>
+                            <label for="totalfish">Quantity</label>
                             <input type="text">
                         </div>
                         <div>
-                            <label for="mortalityrate">Price Per Unit</label>
+                            <label for="mortalityrate">Size</label>
                             <input type="text">
                         </div>
                         <div>
@@ -172,7 +188,7 @@
                             <input type="text">
                         </div>
                         <div>
-                            <label for="feedavailable">Fish Type</label>
+                            <label for="feedavailable">Batch</label>
                             <input type="text">
                         </div>
                         <div>
@@ -181,7 +197,7 @@
                         </div>
                     </form>
                     <div  class="batch_createbtn">
-                        <button class="addpond_btn">Create Batch</button>
+                        <button class="addpond_btn">Add Purchase</button>
                     </div>
                 </div>
             </div>
@@ -193,24 +209,24 @@
 					</div>
 					<form>
 						<div>
-							<label for="pondname">Batch Name</label>
-							<input type="text" placeholder="Batch 7">
+							<label for="pondname">Brand Name</label>
+							<input type="text" placeholder="Aler Aqua">
 						</div>
 						<div>
-							<label for="totalfish">Units Purchased</label>
-							<input type="text" placeholder="3000 units">
+							<label for="totalfish">Quantity</label>
+							<input type="text" placeholder="20 bags">
 						</div>
 						<div>
-							<label for="mortalityrate">Price per unit</label>
-							<input type="text" placeholder="50/unit">
+							<label for="mortalityrate">Size</label>
+							<input type="text" placeholder="9mm">
 						</div>
 						<div>
 							<label for="feedavailable">Amount Spent</label>
 							<input type="text" placeholder="100.000">
 						</div>
 						<div>
-							<label for="feedavailable">Fish type</label>
-							<input type="text" placeholder="Fingerlings">
+							<label for="feedavailable">Batch</label>
+							<input type="text" placeholder="Batch 7">
 						</div>
 						<div>
 							<label for="feedavailable">Status</label>
@@ -218,7 +234,7 @@
 						</div>
 						<div>
 							<label for="feedavailable">Vendor</label>
-							<input type="text" placeholder="Evergreen farm">
+							<input type="text" placeholder="FishFeeds.inc">
 						</div>
 					</form>
 					<div  class="batch_createbtn">
@@ -229,10 +245,10 @@
             <div class="custom-modal" id="custom-modal-6">
                 <div class="add_NewFarm pondStats">
                     <div class="For_closeModals">
-                        <h2>Delete Batch</h2>
+                        <h2>Delete Feed</h2>
                         <p class="close-buttons">&times;</p>
                     </div>
-                    <h3 class="deletepond_h3">You are about to delete this batch forever. Are you really sure about this?</h3>
+                    <h3 class="deletepond_h3">You are about to delete this feed record forever. Are you really sure about this?</h3>
                     <div  class="deletepond_btn">
                         <button class="close-buttons">Cancel</button>
                         <button>Delete</button>
@@ -247,9 +263,9 @@
 					<tr>
 					  <th><input type="checkbox" name="checkbox"></th>
 					  <th>Date</th>
-					  <th>Name</th>
-					  <th>Unit Purchased</th>
-					  <th>Fish Type</th>
+					  <th>Brand</th>
+					  <th>size (mm)</th>
+					  <th>Quantity</th>
 					  <th>Status</th>
 					  <th></th>
 					</tr>
@@ -258,9 +274,9 @@
 					<tr>
 					  <td><input type="checkbox" name="checkbox"></td>
 					  <td>20/12/2023</td>
-					  <td>Batch 1</td>
-					  <td>3000 units</td>
-					  <td>Fingerlings</td>
+					  <td>Aller Aqua</td>
+					  <td>9mm</td>
+					  <td>20 Bags</td>
 					  <td class="instock"><p>In stock</p></td>
 					  <td>
 						<div class="batchdropdown">
@@ -273,107 +289,107 @@
 					  </td>
 					</tr>
 					<tr>
-						<td><input type="checkbox" name="checkbox"></td>
-						<td>20/12/2023</td>
-						<td>Batch 1</td>
-						<td>3000 units</td>
-						<td>Fingerlings</td>
-						<td class="instock"><p>In stock</p></td>
-						<td>
-							<div class="batchdropdown">
-								<button class="batchdropdown-btn">&#10247</button>
-								<div class="batchdropdown-content">
-								  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
-								  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
-								</div>
-							  </div>
-						</td>
-					  </tr>
+                        <td><input type="checkbox" name="checkbox"></td>
+                        <td>20/12/2023</td>
+                        <td>Aller Aqua</td>
+                        <td>9mm</td>
+                        <td>20 Bags</td>
+                        <td class="instock"><p>In stock</p></td>
+                        <td>
+                          <div class="batchdropdown">
+                              <button class="batchdropdown-btn">&#10247</button>
+                              <div class="batchdropdown-content">
+                                <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+                                <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="checkbox"></td>
+                        <td>20/12/2023</td>
+                        <td>Aller Aqua</td>
+                        <td>9mm</td>
+                        <td>20 Bags</td>
+                        <td class="instock"><p>In stock</p></td>
+                        <td>
+                          <div class="batchdropdown">
+                              <button class="batchdropdown-btn">&#10247</button>
+                              <div class="batchdropdown-content">
+                                <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+                                <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="checkbox"></td>
+                        <td>20/12/2023</td>
+                        <td>Aller Aqua</td>
+                        <td>9mm</td>
+                        <td>20 Bags</td>
+                        <td class="soldout"><p>In stock</p></td>
+                        <td>
+                          <div class="batchdropdown">
+                              <button class="batchdropdown-btn">&#10247</button>
+                              <div class="batchdropdown-content">
+                                <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+                                <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
 					  <tr>
-						<td><input type="checkbox" name="checkbox"></td>
-						<td>20/12/2023</td>
-						<td>Batch 1</td>
-						<td>3000 units</td>
-						<td>Fingerlings</td>
-						<td class="instock"><p>In stock</p></td>
-						<td>
-							<div class="batchdropdown">
-								<button class="batchdropdown-btn">&#10247</button>
-								<div class="batchdropdown-content">
-								  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
-								  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
-								</div>
-							</div>
-						</td>
-					  </tr>
-					  <tr>
-						<td><input type="checkbox" name="checkbox"></td>
-						<td>20/12/2023</td>
-						<td>Batch 1</td>
-						<td>3000 units</td>
-						<td>Fingerlings</td>
-						<td class="soldout"><p>Sold Out</p></td>
-						<td>
-							<div class="batchdropdown">
-								<button class="batchdropdown-btn">&#10247</button>
-								<div class="batchdropdown-content">
-								  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
-								  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
-								</div>
-							</div>
-						</td>
-					  </tr>
-					  <tr>
-						<td><input type="checkbox" name="checkbox"></td>
-						<td>20/12/2023</td>
-						<td>Batch 1</td>
-						<td>3000 units</td>
-						<td>Fingerlings</td>
-						<td class="soldout"><p>Sold Out</p></td>
-						<td>
-							<div class="batchdropdown">
-								<button class="batchdropdown-btn">&#10247</button>
-								<div class="batchdropdown-content">
-								  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
-								  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
-								</div>
-							</div>
-						</td>
-					  </tr>
-					  <tr>
-						<td><input type="checkbox" name="checkbox"></td>
-						<td>20/12/2023</td>
-						<td>Batch 1</td>
-						<td>3000 units</td>
-						<td>Fingerlings</td>
-						<td class="soldout"><p>Sold Out</p></td>
-						<td>
-							<div class="batchdropdown">
-								<button class="batchdropdown-btn">&#10247</button>
-								<div class="batchdropdown-content">
-								  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
-								  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
-								</div>
-							</div>
-						</td>
-					  </tr>
-					  <tr>
-						<td><input type="checkbox" name="checkbox"></td>
-						<td>20/12/2023</td>
-						<td>Batch 1</td>
-						<td>3000 units</td>
-						<td>Fingerlings</td>
-						<td class="soldout"><p>Sold Out</p></td>
-						<td>
-							<div class="batchdropdown">
-								<button class="batchdropdown-btn">&#10247</button>
-								<div class="batchdropdown-content">
-								  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
-								  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
-								</div>
-							</div>
-						</td>
-					  </tr>
+                        <td><input type="checkbox" name="checkbox"></td>
+                        <td>20/12/2023</td>
+                        <td>Aller Aqua</td>
+                        <td>9mm</td>
+                        <td>20 Bags</td>
+                        <td class="soldout"><p>In stock</p></td>
+                        <td>
+                          <div class="batchdropdown">
+                              <button class="batchdropdown-btn">&#10247</button>
+                              <div class="batchdropdown-content">
+                                <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+                                <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="checkbox"></td>
+                        <td>20/12/2023</td>
+                        <td>Aller Aqua</td>
+                        <td>9mm</td>
+                        <td>20 Bags</td>
+                        <td class="soldout"><p>In stock</p></td>
+                        <td>
+                          <div class="batchdropdown">
+                              <button class="batchdropdown-btn">&#10247</button>
+                              <div class="batchdropdown-content">
+                                <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+                                <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="checkbox"></td>
+                        <td>20/12/2023</td>
+                        <td>Aller Aqua</td>
+                        <td>9mm</td>
+                        <td>20 Bags</td>
+                        <td class="soldout"><p>In stock</p></td>
+                        <td>
+                          <div class="batchdropdown">
+                              <button class="batchdropdown-btn">&#10247</button>
+                              <div class="batchdropdown-content">
+                                <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+                                <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
 				  </tbody>
 				</table>
 			  </div>

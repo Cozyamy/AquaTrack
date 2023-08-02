@@ -22,6 +22,8 @@ farmdropdownButton.addEventListener("click", function() {
   farmdropdownButton.classList.toggle("farmdropdown-active");
 });
 
+
+
 const batchdropdownBtns = document.querySelectorAll('.batchdropdown-btn');
 
 batchdropdownBtns.forEach(function(btn) {
@@ -128,6 +130,8 @@ function showContent(target) {
     }
   });
 }
+
+
 
 
 

@@ -3376,6 +3376,130 @@ html {
     }
   }
   /* Harvest Page ENDS */
+  /* Inventory Page START */
+  .inventory_initialSection {
+    margin: 10px 31px;
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+  }
+
+  .contain_inventory {
+    margin-bottom: 0px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    max-width: 700px;
+  }
+
+  #inventorydropdown-menu {
+    position: relative;
+    max-width: 238px;
+}
+
+#inventorydropdown-content {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+min-width: 238px;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+padding-bottom: 50px;
+border-radius: 0px 0px 8px 8px;
+background-color: var(--color-white);
+z-index: 1;
+align-items: center;
+}
+
+#inventorydropdown-content a {
+display: block;
+color: var(--color-black);
+text-decoration: none;
+padding: 10px;
+font-size: 20px;
+font-weight: var(--font-weight-bold);
+border-bottom: 1px solid var(--color-black);
+align-items: center;
+}
+
+#inventorydropdown-content a:hover {
+color: var(--color-primary);
+}
+
+.inventory_dropdownbtn {
+border-radius: 6px;
+border: 1px solid rgba(229, 229, 229, 0.50);
+background-color: var(--color-white);
+padding: 6px 17px 5px 18px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+font-size: 20px;
+font-weight: var(--font-weight-bold);
+color: #12263F;
+min-width: 238px;
+align-items: center;
+}
+
+#inventorydropdown-button.inventorydropdown-active {
+border: none;
+border-bottom: 1px solid var(--color-black);
+background-color: var(--color-white);
+border-radius: 8px 8px 0px 0px;
+padding: 10px;
+color: var(--color-primary);
+}
+
+#inventorydropdown-button.inventorydropdown-active .arrow {
+  border-top: 2px solid var(--color-primary);
+  border-right: 2px solid var(--color-primary);
+}
+
+.inventorydropdown-open #inventorydropdown-content {
+display: block;
+}
+
+#inventorydropdown-button .arrow {
+display: inline-block;
+width: 8px;
+height: 8px;
+margin-left: 6px;
+border-top: 2px solid #12263F;
+border-right: 2px solid #12263F;
+transform: rotate(135deg);
+transition: transform 0.3s ease-in-out;
+}
+
+.inventorydropdown-open #inventorydropdown-button .arrow {
+transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 800px) {
+  .inventory_initialSection {
+    gap: 30px;
+  }
+
+  .contain_inventory {
+    grid-template-columns: auto auto;
+    max-width: 700px;
+  }
+
+  .contain_inventory .myButton {
+    color: #8C8888;
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    padding: 20px 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.contain_inventory .active {
+  color: var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+}
+}
+  /* Inventory Page ENDS */
   /* Settings Page START */
   .content {
     display: none;
