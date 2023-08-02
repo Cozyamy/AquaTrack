@@ -47,3 +47,35 @@ inventorydropdownButton.addEventListener("click", function() {
   inventorydropdownMenu.classList.toggle("inventorydropdown-open");
   inventorydropdownButton.classList.toggle("inventorydropdown-active");
 });
+
+
+// expense page dropdown
+
+  // Function to format a date as "Month Day, Year" (e.g., "January 1, 2023")
+  function formatDate(date) {
+    const options = { month: 'long', day: 'numeric', year: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+  }
+
+  // Function to update the date range in the dropdown button
+  function updateDateRange() {
+    // Get the current date
+    const currentDate = new Date();
+
+    // Get the first day of the current month
+    const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+
+    // Get the first day of the next month
+    const firstDayOfNextMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
+
+    // Format the dates as strings
+    const currentMonthStr = formatDate(firstDayOfMonth);
+    const nextMonthStr = formatDate(firstDayOfNextMonth);
+
+    // Update the paragraph text with the date range
+    const dateRangeParagraph = document.querySelector('.inventory_dropdownbtn > div > p');
+    dateRangeParagraph.textContent = `${currentMonthStr} - ${nextMonthStr}`;
+  }
+
+  // Call the function to update the date range when the page loads
+  updateDateRange();

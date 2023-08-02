@@ -131,17 +131,36 @@
                 <button id="btn7" class="myButton">Employees</button>
                 <button id="btn8" class="myButton">Customers</button>
             </div>
-            <div id="inventorydropdown-menu">
+            <div id="inventorydropdown-menu" class="expensesdropdown_calender">
                 <a href="#" id="inventorydropdown-button" class="inventory_dropdownbtn">
-                    <p class="ActiveInventory_p"> Batch 7</p>
+                    <div>
+                        <img src="../images/Task.svg">
+                        <p>January 1, 2023 - February 1,2023</p>
+                    </div>
                     <p class="arrow"></p>
                 </a>
                 <div id="inventorydropdown-content">
-                    <a href="#">Batch 6</a>
-                    <a href="#">Batch 5</a>
+                    <div class="wrapper">
+                        <div class="icons">
+                            <span id="prev" class="material-symbols">&lt;</span>
+                            <p class="current-date"></p>
+                            <span id="next" class="material-symbols next">&gt;</span>
+                        </div>
+                        <div class="calendar">
+                            <ul class="weeks">
+                                <li>Sun</li>
+                                <li>Mon</li>
+                                <li>Tue</li>
+                                <li>Wed</li>
+                                <li>Thu</li>
+                                <li>Fri</li>
+                                <li>Sat</li>
+                            </ul>
+                            <ul class="days"></ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
         <section class="harvest_Grid">
             <article>
                 <div class="harvest-gridDiv">
@@ -208,11 +227,7 @@
                 </div>
             </article>
         </section>
-        <section class="batch_header">
-            <div class="search-container batcharea1">
-                <input type="text" class="search-input" placeholder="Search" />
-                <i class="search-icon"></i>
-            </div>
+        <section class="batch_header expense_header">
             <div class="filter_batch batcharea2">
                 <p>Filter by</p>
                 <div id="farmdropdown-menu">
@@ -227,43 +242,28 @@
                 </div>
             </div>
             <div class="filter_buttons batcharea3">
-                <button class="addbatch custom-modal-button" data-modal="custom-modal-5"><span>+ </span> Add new Purchase</button>
+                <button class="addbatch custom-modal-button" data-modal="custom-modal-5"><span>+ </span> Add new expense</button>
                 <button class="deletebatch custom-modal-button" data-modal="custom-modal-6">Delete</button>
             </div>
             <div class="custom-modal" id="custom-modal-5">
-                <div class="add_NewFarm pondStats">
+                <div class="add_NewFarm add_expenses">
                     <div class="For_closeModals">
-                        <h2>Create New Feed Purchase</h2>
+                        <h3></h3>
+                        <h2>Add New Expenses</h2>
                         <p class="close-buttons">&times;</p>
                     </div>
                     <form>
                         <div>
-                            <label for="pondname">Brand Name</label>
+                            <label for="pondname">Amount Spent</label>
                             <input type="text">
                         </div>
                         <div>
-                            <label for="totalfish">Quantity</label>
-                            <input type="text">
-                        </div>
-                        <div>
-                            <label for="mortalityrate">Size</label>
-                            <input type="text">
-                        </div>
-                        <div>
-                            <label for="feedavailable">Amount Spent</label>
-                            <input type="text">
-                        </div>
-                        <div>
-                            <label for="feedavailable">Batch</label>
-                            <input type="text">
-                        </div>
-                        <div>
-                            <label for="feedavailable">Vendor</label>
-                            <input type="text">
+                            <label for="feedavailable">Description</label>
+                            <textarea></textarea>
                         </div>
                     </form>
                     <div  class="batch_createbtn">
-                        <button class="addpond_btn">Add Purchase</button>
+                        <button class="addpond_btn">Add new expense</button>
                     </div>
                 </div>
             </div>
@@ -275,32 +275,12 @@
 					</div>
 					<form>
 						<div>
-							<label for="pondname">Brand Name</label>
-							<input type="text" placeholder="Aler Aqua">
+							<label for="pondname">Description</label>
+							<input type="text" placeholder="Employee Salary ">
 						</div>
 						<div>
-							<label for="totalfish">Quantity</label>
-							<input type="text" placeholder="20 bags">
-						</div>
-						<div>
-							<label for="mortalityrate">Size</label>
-							<input type="text" placeholder="9mm">
-						</div>
-						<div>
-							<label for="feedavailable">Amount Spent</label>
-							<input type="text" placeholder="100.000">
-						</div>
-						<div>
-							<label for="feedavailable">Batch</label>
-							<input type="text" placeholder="Batch 7">
-						</div>
-						<div>
-							<label for="feedavailable">Status</label>
-							<input type="text" placeholder="In Stock">
-						</div>
-						<div>
-							<label for="feedavailable">Vendor</label>
-							<input type="text" placeholder="FishFeeds.inc">
+							<label for="totalfish">Amount Spent</label>
+							<input type="text" placeholder="30,000">
 						</div>
 					</form>
 					<div  class="batch_createbtn">
@@ -311,10 +291,10 @@
             <div class="custom-modal" id="custom-modal-6">
                 <div class="add_NewFarm pondStats">
                     <div class="For_closeModals">
-                        <h2>Delete Feed</h2>
+                        <h2>Delete Expenses</h2>
                         <p class="close-buttons">&times;</p>
                     </div>
-                    <h3 class="deletepond_h3">You are about to delete this feed record forever. Are you really sure about this?</h3>
+                    <h3 class="deletepond_h3">You are about to delete this record forever. Are you really sure about this?</h3>
                     <div  class="deletepond_btn">
                         <button class="close-buttons">Cancel</button>
                         <button>Delete</button>
@@ -328,22 +308,18 @@
 				  <thead>
 					<tr>
 					  <th><input type="checkbox" name="checkbox"></th>
-					  <th>Date</th>
-					  <th>Brand</th>
-					  <th>size (mm)</th>
-					  <th>Quantity</th>
-					  <th>Status</th>
+					  <th>Date Created</th>
+					  <th>Description</th>
+					  <th>Amount Spent</th>
 					  <th></th>
 					</tr>
 				  </thead>
 				  <tbody>
 					<tr>
 					  <td><input type="checkbox" name="checkbox"></td>
-					  <td>20/12/2023</td>
-					  <td>Aller Aqua</td>
-					  <td>9mm</td>
-					  <td>20 Bags</td>
-					  <td class="instock"><p>In stock</p></td>
+					  <td>11/02/2023</td>
+					  <td>Plumbing service for the first two ponds </td>
+					  <td>200,000</td>
 					  <td>
 						<div class="batchdropdown">
 							<button class="batchdropdown-btn">&#10247</button>
@@ -356,11 +332,9 @@
 					</tr>
 					<tr>
                         <td><input type="checkbox" name="checkbox"></td>
-                        <td>20/12/2023</td>
-                        <td>Aller Aqua</td>
-                        <td>9mm</td>
-                        <td>20 Bags</td>
-                        <td class="instock"><p>In stock</p></td>
+                        <td>11/02/2023</td>
+                        <td>Payment for harvest staff workers</td>
+                        <td>30,000</td>
                         <td>
                           <div class="batchdropdown">
                               <button class="batchdropdown-btn">&#10247</button>
@@ -373,11 +347,9 @@
                       </tr>
                       <tr>
                         <td><input type="checkbox" name="checkbox"></td>
-                        <td>20/12/2023</td>
-                        <td>Aller Aqua</td>
-                        <td>9mm</td>
-                        <td>20 Bags</td>
-                        <td class="instock"><p>In stock</p></td>
+                        <td>11/02/2023</td>
+                        <td>Employee Salary </td>
+                        <td>30,000</td>
                         <td>
                           <div class="batchdropdown">
                               <button class="batchdropdown-btn">&#10247</button>
@@ -390,28 +362,9 @@
                       </tr>
                       <tr>
                         <td><input type="checkbox" name="checkbox"></td>
-                        <td>20/12/2023</td>
-                        <td>Aller Aqua</td>
-                        <td>9mm</td>
-                        <td>20 Bags</td>
-                        <td class="soldout"><p>In stock</p></td>
-                        <td>
-                          <div class="batchdropdown">
-                              <button class="batchdropdown-btn">&#10247</button>
-                              <div class="batchdropdown-content">
-                                <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
-                                <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
-                              </div>
-                          </div>
-                        </td>
-                      </tr>
-					  <tr>
-                        <td><input type="checkbox" name="checkbox"></td>
-                        <td>20/12/2023</td>
-                        <td>Aller Aqua</td>
-                        <td>9mm</td>
-                        <td>20 Bags</td>
-                        <td class="soldout"><p>In stock</p></td>
+                        <td>11/02/2023</td>
+                        <td>Plumbing service for the first two ponds </td>
+                        <td>30,000</td>
                         <td>
                           <div class="batchdropdown">
                               <button class="batchdropdown-btn">&#10247</button>
@@ -424,11 +377,9 @@
                       </tr>
                       <tr>
                         <td><input type="checkbox" name="checkbox"></td>
-                        <td>20/12/2023</td>
-                        <td>Aller Aqua</td>
-                        <td>9mm</td>
-                        <td>20 Bags</td>
-                        <td class="soldout"><p>In stock</p></td>
+                        <td>11/02/2023</td>
+                        <td>Employee Salary </td>
+                        <td>30,000</td>
                         <td>
                           <div class="batchdropdown">
                               <button class="batchdropdown-btn">&#10247</button>
@@ -441,11 +392,24 @@
                       </tr>
                       <tr>
                         <td><input type="checkbox" name="checkbox"></td>
-                        <td>20/12/2023</td>
-                        <td>Aller Aqua</td>
-                        <td>9mm</td>
-                        <td>20 Bags</td>
-                        <td class="soldout"><p>In stock</p></td>
+                        <td>11/02/2023</td>
+                        <td>Plumbing service for the first two ponds </td>
+                        <td>30,000</td>
+                        <td>
+                          <div class="batchdropdown">
+                              <button class="batchdropdown-btn">&#10247</button>
+                              <div class="batchdropdown-content">
+                                <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+                                <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="checkbox"></td>
+                        <td>11/02/2023</td>
+                        <td>Employee Salary </td>
+                        <td>30,000</td>
                         <td>
                           <div class="batchdropdown">
                               <button class="batchdropdown-btn">&#10247</button>
@@ -477,6 +441,8 @@
 	<script src="../js/myscript.js"></script>
     <script src="../js/popupscript.js"></script>
     <script type="text/javascript" src="../js/scriptss.js"></script>
+    <script src="../js/inventoryscript.js"></script>
+    
 	
 </body>
 </html>
