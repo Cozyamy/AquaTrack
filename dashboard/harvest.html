@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="icon" type="image/svg" sizes="32x32" href="../images/logo.svg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+	<script src="../js/scripts.js" defer></script>
+	<style>
+	@import url('https://fonts.cdnfonts.com/css/montserrat');
+	</style>
+                
+</head>
+<body class="dashboard">
+	<aside class="dashboardAside">
+		<a href="dashboard.html" class="dashboardAside_Logo">
+			<img src="../images/logo.svg">
+		</a>
+		<nav>
+			<a class="nav-link" href="dashboard.html">
+				<img src="../images/Dashboard.svg">&nbsp; 
+				Dashboard
+			</a>
+			<a class="nav-link" href="farms.html">
+				<img src="../images/farms.svg">&nbsp;
+				Farms
+			</a>
+			<a class="nav-link" href="batch.html">
+				<img src="../images/material-symbols_set-meal.svg">&nbsp;
+				Batch
+			</a>
+			<a class="activeDash nav-link" href="harvest.html">
+				<img src="../images/mdi_account-cash.svg">&nbsp;
+				Harvest
+			</a>
+			<a class="nav-link" href="inventory.html">
+				<img src="../images/material-symbols_inventory-2-rounded.svg">&nbsp;
+				Inventory
+			</a>
+			<a class="nav-link" href="settings.html">
+				<img src="../images/material-symbols_settings.svg">&nbsp;
+				Settings
+			</a>
+		</nav>
+		<a href="logout.html" class="logout nav-link">
+			<img src="../images/Group.svg">&nbsp;
+			Log Out
+		</a>
+	</aside>
+	<main class="dashboardMain">
+		<header>
+			<div class="Logo_hamburger">
+				<div class="navbar">
+					<div class="hamburger">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</div>
+					<ul class="navbar-menu navMenu">
+					  <li><a class="nav-link" href="dashboard.html">
+							<img src="../images/Dashboard.svg">&nbsp; Dashboard
+						   </a>
+					   </li>
+					   <li>
+							<a class="nav-link" href="farms.html">
+								<img src="../images/farms.svg">&nbsp;
+							Farms
+							</a>
+					   </li>
+					   <li>
+							<a class="nav-link" href="batch.html">
+								<img src="../images/material-symbols_set-meal.svg">&nbsp;
+							Batch
+							</a>
+					   </li>
+					   <li>
+							<a class="activeDash nav-link" href="harvest.html">
+								<img src="../images/mdi_account-cash.svg">&nbsp;
+								Harvest
+							</a>
+					   </li>
+					   <li>
+							<a class="nav-link" href="inventory.html">
+								<img src="../images/material-symbols_inventory-2-rounded.svg">&nbsp;
+								Inventory
+							</a>
+					   </li>
+					   <li>
+							<a class="nav-link" href="settings.html">
+								<img src="../images/material-symbols_settings.svg">&nbsp;
+								Settings
+							</a>
+					   </li>
+					  <li>
+						<a src="logout.html" class="logout nav-link">
+							<img src="../images/Group.svg">&nbsp;
+						Log Out
+						</a>
+					</li>
+					</ul>
+				</div>
+				<a href="dashboard.html" class="dashboardAside_Logo1">
+					<img src="../images/logo.svg">
+				</a>
+			</div>
+			<h1>Harvest</h1>
+			<div class="dashNavMenu">
+				<a href="settings.html"><p>Jane Doe</p></a>
+					<a href="settings.html"><img class="menuimg" src="../images/UserCircleOutline.svg">
+				</a>
+				<div class="dropdown">
+  					<button class="dropbtn dropdown-button">&#8744;</button>
+  					<div id="myDropdown" class="dropdown-content">
+    					<a href="#" class="activeDropdown">Farm 1</a>
+    					<a href="#">Farm 2</a>
+   	 					<a href="logout.html" class="navLogout">
+   	 						<img src="../images/Group.svg">&nbsp;
+   	 					Log Out</a>
+  					</div>
+				</div>
+			</div>
+		</header>
+        <section class="harvest_Grid">
+            <article>
+                <div class="harvest-gridDiv">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_477_3631)">
+                        <path d="M10.2245 11.9377C10.1573 11.8646 10.0723 11.8099 9.9844 11.7643C9.79304 11.6652 9.58377 11.6051 9.37598 11.5508V13.1505C9.71325 13.1126 10.1004 12.991 10.2775 12.6782C10.3621 12.5287 10.3789 12.3451 10.3445 12.1788C10.3258 12.0887 10.2872 12.0059 10.2245 11.9377Z" fill="#F3C403"/>
+                        <path d="M10.2754 12.6815C10.2761 12.6803 10.2765 12.6795 10.2773 12.6782C10.2767 12.6793 10.276 12.6804 10.2754 12.6815Z" fill="#F3C403"/>
+                        <path d="M7.79431 9.38052C7.73633 9.46464 7.69994 9.5602 7.68991 9.66178C7.67987 9.76356 7.6855 9.8768 7.72443 9.97261C7.76149 10.0639 7.83912 10.1313 7.91926 10.1856C8.00918 10.2464 8.10808 10.2938 8.2088 10.3341C8.2933 10.3679 8.38834 10.4002 8.4908 10.4314V8.98389C8.23197 9.03876 7.94916 9.1559 7.79431 9.38052Z" fill="#F3C403"/>
+                        <path d="M10.284 12.666C10.2818 12.6698 10.2796 12.6737 10.2773 12.6778C10.28 12.673 10.282 12.6695 10.284 12.666Z" fill="#F3C403"/>
+                        <path d="M10.293 12.6518C10.2939 12.65 10.2941 12.6498 10.293 12.6518V12.6518Z" fill="#F3C403"/>
+                        <path d="M9.94324 3.94959C11.3125 2.80681 12.2275 0.232288 11.6644 0.119685C10.9163 -0.0299902 9.29161 0.626316 8.50635 0.741949C7.39258 0.87555 6.17954 -0.457934 5.49864 0.28535C4.94502 0.889689 5.89555 3.08748 7.38267 4.04494C2.94591 6.21134 -3.29026 17.0868 7.58907 17.8759C22.6425 18.9678 15.1047 6.06069 9.94324 3.94959ZM11.236 12.5265C11.1897 12.9505 10.9636 13.3339 10.6255 13.5942C10.2685 13.8691 9.82079 13.9969 9.37594 14.0327V14.5012C9.37594 14.6265 9.32083 14.7478 9.22638 14.8308C9.09656 14.9449 8.9058 14.973 8.74824 14.9009C8.59267 14.8298 8.49046 14.6713 8.49046 14.5012V13.9892C8.41418 13.9748 8.33845 13.9577 8.26361 13.9373C7.84785 13.8238 7.46221 13.6026 7.18051 13.2753C7.04019 13.1121 6.92579 12.927 6.84667 12.7272C6.826 12.675 6.80758 12.6218 6.79144 12.568C6.77683 12.5193 6.76175 12.4698 6.75654 12.4191C6.74777 12.334 6.76475 12.2471 6.80469 12.1713C6.88678 12.0153 7.05976 11.9211 7.23638 11.9367C7.4102 11.9521 7.56255 12.0719 7.61727 12.2365C7.63413 12.2872 7.64557 12.3392 7.6645 12.3893C7.68326 12.4392 7.70592 12.4876 7.73256 12.5337C7.78517 12.6245 7.85107 12.7083 7.92697 12.7809C8.08343 12.9307 8.28271 13.028 8.49046 13.0859V11.3454C8.08424 11.241 7.66492 11.106 7.32947 10.8469C7.16645 10.7209 7.02812 10.5644 6.93752 10.3791C6.84192 10.1836 6.80232 9.96571 6.80071 9.74934C6.79906 9.52964 6.84108 9.31189 6.93333 9.11172C7.01973 8.9243 7.14413 8.75602 7.29665 8.61653C7.62278 8.31832 8.05599 8.15198 8.49051 8.09088V8.05259V7.60457C8.49051 7.47926 8.54561 7.35799 8.64006 7.27501C8.76992 7.16093 8.9606 7.13274 9.11821 7.20486C9.27373 7.27602 9.37598 7.43449 9.37598 7.60457V8.05259V8.08823C9.43388 8.09547 9.49161 8.10413 9.54904 8.11449C9.97572 8.1912 10.393 8.36624 10.7051 8.67186C10.8529 8.81662 10.9739 8.9891 11.059 9.17719C11.0828 9.22966 11.1036 9.28336 11.1216 9.3381C11.1383 9.38914 11.1552 9.4417 11.1632 9.49497C11.176 9.58001 11.1629 9.66788 11.1263 9.74568C11.0512 9.90507 10.8829 10.0066 10.7058 9.99904C10.5318 9.9915 10.3742 9.87894 10.3119 9.71736C10.2933 9.66931 10.2841 9.61843 10.2651 9.5705C10.246 9.52199 10.2213 9.4757 10.1928 9.43198C10.1374 9.34698 10.0656 9.2741 9.98364 9.21405C9.80618 9.08386 9.59093 9.01603 9.37585 8.97812V10.6437C9.63146 10.7045 9.88729 10.7708 10.1322 10.8667C10.5023 11.0118 10.8531 11.2341 11.0551 11.5847C11.0238 11.5301 10.9933 11.4769 11.0562 11.5865C11.1179 11.6942 11.0884 11.6429 11.0574 11.5889C11.2182 11.8703 11.271 12.2068 11.236 12.5265Z" fill="#F3C403"/>
+                        <path d="M10.2712 12.6895C10.2686 12.694 10.2664 12.6981 10.2646 12.7012C10.2662 12.6985 10.2684 12.6945 10.2712 12.6895Z" fill="#F3C403"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_477_3631">
+                            <rect width="18" height="17.8827" fill="white" transform="translate(0 0.0585938)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <p>Total Revenue</p>
+                </div>
+                <div class="harvest-gridPositive">
+                    <h3>N5,842,000</h3>
+                    <div>
+                        <h5>15%</h5>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8715 15.8492C14.9817 15.7396 15.0469 15.5849 15.036 15.416L14.6573 9.50934C14.6376 9.20227 14.3726 8.97093 14.0654 8.99263C13.7582 9.01433 13.5251 9.28084 13.5448 9.58791L13.8291 14.0216L8.58591 8.77838C8.36895 8.56142 8.01604 8.56258 7.79766 8.78096C7.57928 8.99934 7.57812 9.35225 7.79508 9.56921L13.0316 14.8058L8.60376 14.5281C8.29667 14.5089 8.03048 14.7423 8.00922 15.0495C7.98795 15.3568 8.21966 15.6214 8.52676 15.6407L14.3694 16.007C14.5445 16.0398 14.7327 15.988 14.8687 15.852C14.8697 15.8511 14.8706 15.8501 14.8715 15.8492Z" fill="#F84D4D"/>
+                          </svg>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="harvest-gridDiv">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M15.7501 8.25014C15.5512 8.25014 15.3605 8.32916 15.2198 8.46981C15.0792 8.61046 15.0001 8.80123 15.0001 9.00014V10.9426L10.2826 6.21764C10.2129 6.14734 10.13 6.09155 10.0386 6.05347C9.94718 6.01539 9.84915 5.99579 9.75014 5.99579C9.65113 5.99579 9.5531 6.01539 9.46171 6.05347C9.37031 6.09155 9.28736 6.14734 9.21764 6.21764L6.75014 8.69264L2.78264 4.71764C2.64141 4.57641 2.44987 4.49707 2.25014 4.49707C2.05041 4.49707 1.85887 4.57641 1.71764 4.71764C1.57641 4.85887 1.49707 5.05041 1.49707 5.25014C1.49707 5.44987 1.57641 5.64141 1.71764 5.78264L6.21764 10.2826C6.28736 10.3529 6.37031 10.4087 6.46171 10.4468C6.5531 10.4849 6.65113 10.5045 6.75014 10.5045C6.84915 10.5045 6.94718 10.4849 7.03857 10.4468C7.12997 10.4087 7.21292 10.3529 7.28264 10.2826L9.75014 7.80764L13.9426 12.0001H12.0001C11.8012 12.0001 11.6105 12.0792 11.4698 12.2198C11.3292 12.3605 11.2501 12.5512 11.2501 12.7501C11.2501 12.9491 11.3292 13.1398 11.4698 13.2805C11.6105 13.4211 11.8012 13.5001 12.0001 13.5001H15.7501C15.8481 13.499 15.945 13.4786 16.0351 13.4401C16.2184 13.364 16.364 13.2184 16.4401 13.0351C16.4786 12.945 16.499 12.8481 16.5001 12.7501V9.00014C16.5001 8.80123 16.4211 8.61046 16.2805 8.46981C16.1398 8.32916 15.9491 8.25014 15.7501 8.25014Z" fill="#F84D4D"/>
+                      </svg>
+                    <p>Total Expenses</p>
+                </div>
+                <div class="harvest-gridNegative">
+                    <h3>N2,842,000</h3>
+                    <div>
+                        <h5>15%</h5>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8715 8.1513C14.9817 8.26086 15.0469 8.41561 15.036 8.58451L14.6573 14.4912C14.6376 14.7982 14.3726 15.0296 14.0654 15.0079C13.7582 14.9862 13.5251 14.7196 13.5448 14.4126L13.8291 9.97891L8.58591 15.2221C8.36895 15.4391 8.01604 15.4379 7.79766 15.2195C7.57928 15.0012 7.57812 14.6482 7.79508 14.4313L13.0316 9.19473L8.60376 9.47237C8.29667 9.49163 8.03048 9.25818 8.00922 8.95095C7.98795 8.64372 8.21966 8.37905 8.52676 8.35979L14.3694 7.99344C14.5445 7.9607 14.7327 8.01244 14.8687 8.14846C14.8697 8.1494 14.8706 8.15035 14.8715 8.1513Z" fill="#00966A"/>
+                          </svg>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="harvest-gridDiv">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M15.7501 9.74986C15.5512 9.74986 15.3605 9.67084 15.2198 9.53019C15.0792 9.38954 15.0001 9.19877 15.0001 8.99986V7.05736L10.2826 11.7824C10.2129 11.8527 10.13 11.9085 10.0386 11.9465C9.94718 11.9846 9.84915 12.0042 9.75014 12.0042C9.65113 12.0042 9.5531 11.9846 9.46171 11.9465C9.37031 11.9085 9.28736 11.8527 9.21764 11.7824L6.75014 9.30736L2.78264 13.2824C2.64141 13.4236 2.44987 13.5029 2.25014 13.5029C2.05041 13.5029 1.85887 13.4236 1.71764 13.2824C1.57641 13.1411 1.49707 12.9496 1.49707 12.7499C1.49707 12.5501 1.57641 12.3586 1.71764 12.2174L6.21764 7.71736C6.28736 7.64707 6.37031 7.59127 6.46171 7.55319C6.5531 7.51512 6.65113 7.49551 6.75014 7.49551C6.84915 7.49551 6.94718 7.51512 7.03857 7.55319C7.12997 7.59127 7.21292 7.64707 7.28264 7.71736L9.75014 10.1924L13.9426 5.99986H12.0001C11.8012 5.99986 11.6105 5.92084 11.4698 5.78019C11.3292 5.63954 11.2501 5.44877 11.2501 5.24986C11.2501 5.05095 11.3292 4.86018 11.4698 4.71953C11.6105 4.57888 11.8012 4.49986 12.0001 4.49986H15.7501C15.8481 4.50105 15.945 4.52143 16.0351 4.55986C16.2184 4.63597 16.364 4.7816 16.4401 4.96486C16.4786 5.05503 16.499 5.15185 16.5001 5.24986V8.99986C16.5001 9.19877 16.4211 9.38954 16.2805 9.53019C16.1398 9.67084 15.9491 9.74986 15.7501 9.74986Z" fill="#00966A"/>
+                      </svg>
+                    <p>Total Income</p>
+                </div>
+                <div class="harvest-gridPositive">
+                    <h3>N842,000</h3>
+                    <div>
+                        <h5>15%</h5>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8715 15.8492C14.9817 15.7396 15.0469 15.5849 15.036 15.416L14.6573 9.50934C14.6376 9.20227 14.3726 8.97093 14.0654 8.99263C13.7582 9.01433 13.5251 9.28084 13.5448 9.58791L13.8291 14.0216L8.58591 8.77838C8.36895 8.56142 8.01604 8.56258 7.79766 8.78096C7.57928 8.99934 7.57812 9.35225 7.79508 9.56921L13.0316 14.8058L8.60376 14.5281C8.29667 14.5089 8.03048 14.7423 8.00922 15.0495C7.98795 15.3568 8.21966 15.6214 8.52676 15.6407L14.3694 16.007C14.5445 16.0398 14.7327 15.988 14.8687 15.852C14.8697 15.8511 14.8706 15.8501 14.8715 15.8492Z" fill="#F84D4D"/>
+                          </svg>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="batch_header">
+            <div class="search-container batcharea1">
+                <input type="text" class="search-input" placeholder="Search" />
+                <i class="search-icon"></i>
+            </div>
+            <div class="filter_batch batcharea2">
+                <p>Filter by</p>
+                <div id="farmdropdown-menu">
+                    <a href="#" id="farmdropdown-button" class="farm_dropdownbtn">
+                        <p> Name</p>
+                        <p class="arrow"></p>
+                    </a>
+                    <div id="farmdropdown-content">
+                      <a href="#">Date</a>
+                      <a href="#">Fish Type</a>
+                    </div>
+                </div>
+            </div>
+            <div class="filter_buttons batcharea3">
+                <button class="addbatch custom-modal-button" data-modal="custom-modal-5"><span>+ </span> Add new harvest</button>
+                <button class="deletebatch custom-modal-button" data-modal="custom-modal-6">Delete</button>
+            </div>
+            <div class="custom-modal" id="custom-modal-5">
+                <div class="addHarvest">
+                    <div class="For_closeModals">
+                        <h2>Create New Harvest</h2>
+                        <p class="close-buttons">&times;</p>
+                    </div>
+                    <form>
+                        <div>
+                            <label for="pondname">Harvest Name</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label for="totalfish">Number of customers</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label for="mortalityrate">fish market size</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label for="feedavailable">Consultant</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label for="feedavailable">Batch</label>
+                            <input type="text">
+                        </div>
+                    </form>
+                    <button class="addHarvest_btn">Add Harvest</button>
+                </div>
+            </div>
+            <div class="custom-modal" id="custom-modal-6">
+                <div class="add_NewFarm pondStats">
+                    <div class="For_closeModals">
+                        <h2>Delete Harvest</h2>
+                        <p class="close-buttons">&times;</p>
+                    </div>
+                    <h3 class="deletepond_h3">You are about to delete this harvest forever. Are you really sure about this?</h3>
+                    <div  class="deletepond_btn">
+                        <button class="close-buttons">Cancel</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<section class="batch_tables">
+            <div class="HarvestOne">
+                <div class="table-container">
+                    <div class="harvestTable_Header">
+                        <h4>Harvest 4</h4>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 7V8H8V14H7V8H1V7H7V1H8V7H14Z" fill="#02579E" stroke="#02579E"/>
+                            </svg>
+                            Insert new customer row
+                        </button>
+                    </div>
+                    <table>
+                    <thead>
+                        <tr>
+                        <th><input type="checkbox" name="checkbox" checked></th>
+                        <th>Customer</th>
+                        <th>Price/unit</th>
+                        <th>Size (kg)</th>
+                        <th>Pieces</th>
+                        <th>Amount</th>
+                        <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Paid</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Pay</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Paid</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Paid</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Pay</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Paid</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Pay</button>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                    </table>
+                </div>
+                <section class="showmore_tables showmore_tablesHarvest">
+                    <p>Previous Harvests</p>
+                    <button class="HarvestPrevious"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="12" fill="#FAFAFA"/>
+                        <path d="M15 16.2866L11.25 12.003L15 7.71943L14.25 6.006L9 12.003L14.25 18L15 16.2866Z" fill="#02579E"/>
+                    </svg></button>
+                    <button class="HarvestNext"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="12" fill="#FAFAFA"/>
+                        <path d="M9 16.2866L12.75 12.003L9 7.71943L9.75 6.006L15 12.003L9.75 18L9 16.2866Z" fill="#02579E"/>
+                    </svg></button>
+                </section>
+            </div>
+            <div class="HarvestTwo hidden">
+                <div class="table-container">
+                    <div class="harvestTable_Header">
+                        <h4>Harvest 3</h4>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 7V8H8V14H7V8H1V7H7V1H8V7H14Z" fill="#02579E" stroke="#02579E"/>
+                            </svg>
+                            Insert new customer row
+                        </button>
+                    </div>
+                    <table>
+                    <thead>
+                        <tr>
+                        <th><input type="checkbox" name="checkbox" checked></th>
+                        <th>Customer</th>
+                        <th>Price/unit</th>
+                        <th>Size (kg)</th>
+                        <th>Pieces</th>
+                        <th>Amount</th>
+                        <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Paid</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Paid</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Paid</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Paid</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Paid</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Paid</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Paid</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Paid</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" checked></td>
+                            <td>Jane Doe</td>
+                            <td>1200</td>
+                            <td>50 (kg)</td>
+                            <td>50 pcs</td>
+                            <td>60,000</td>
+                            <td>
+                                <button id="paymentButton" class="pay">Paid</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <section class="showmore_tables showmore_tablesHarvest">
+                    <p>Back</p>
+                    <button class="HarvestPrevious"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="12" fill="#FAFAFA"/>
+                        <path d="M15 16.2866L11.25 12.003L15 7.71943L14.25 6.006L9 12.003L14.25 18L15 16.2866Z" fill="#02579E"/>
+                    </svg></button>
+                    <button class="HarvestNext"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="12" fill="#FAFAFA"/>
+                        <path d="M9 16.2866L12.75 12.003L9 7.71943L9.75 6.006L15 12.003L9.75 18L9 16.2866Z" fill="#02579E"/>
+                    </svg></button>
+                    <p>Next</p>
+                </section>
+            </div>
+            
+		</section>
+	</main>
+
+	<script type="text/javascript" src="../js/script.js"></script>
+	<script src="../js/myscript.js"></script>
+    <script src="../js/popupscript.js"></script>
+    <script type="text/javascript" src="../js/scriptss.js"></script>
+	
+</body>
+</html>
