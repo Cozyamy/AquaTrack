@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Settings - Aquatrack</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="icon" type="image/svg" sizes="32x32" href="../images/logo.svg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+	<script src="../js/scripts.js" defer></script>
+	<style>
+	@import url('https://fonts.cdnfonts.com/css/montserrat');
+	</style>
+                
+</head>
+<body class="dashboard">
+	<aside class="dashboardAside">
+		<a href="dashboard.html" class="dashboardAside_Logo">
+			<img src="../images/logo.svg">
+		</a>
+		<nav>
+			<a class="nav-link" href="dashboard.html">
+				<img src="../images/Dashboard.svg">&nbsp; 
+				Dashboard
+			</a>
+			<a class="nav-link" href="farms.html">
+				<img src="../images/farms.svg">&nbsp;
+				Farms
+			</a>
+			<a class="nav-link" href="batch.html">
+				<img src="../images/material-symbols_set-meal.svg">&nbsp;
+				Batch
+			</a>
+			<a class="nav-link" href="harvest.html">
+				<img src="../images/mdi_account-cash.svg">&nbsp;
+				Harvest
+			</a>
+			<a class="nav-link" href="inventory.html">
+				<img src="../images/material-symbols_inventory-2-rounded.svg">&nbsp;
+				Inventory
+			</a>
+			<a class="activeDash nav-link" href="settings.html">
+				<img src="../images/material-symbols_settings.svg">&nbsp;
+				Settings
+			</a>
+		</nav>
+		<a href="logout.html" class="logout nav-link">
+			<img src="../images/Group.svg">&nbsp;
+			Log Out
+		</a>
+	</aside>
+	<main class="dashboardMain">
+		<header>
+			<div class="Logo_hamburger">
+				<div class="navbar">
+					<div class="hamburger">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</div>
+					<ul class="navbar-menu navMenu">
+					  <li><a class="activeDash nav-link" href="dashboard.html">
+							<img src="../images/Dashboard.svg">&nbsp; Dashboard
+						   </a>
+					   </li>
+					   <li>
+							<a class="nav-link" href="farms.html">
+								<img src="../images/farms.svg">&nbsp;
+							Farms
+							</a>
+					   </li>
+					   <li>
+							<a class="nav-link" href="batch.html">
+								<img src="../images/material-symbols_set-meal.svg">&nbsp;
+							Batch
+							</a>
+					   </li>
+					   <li>
+							<a class="nav-link" href="harvest.html">
+								<img src="../images/mdi_account-cash.svg">&nbsp;
+								Harvest
+							</a>
+					   </li>
+					   <li>
+							<a class="nav-link" href="inventory.html">
+								<img src="../images/material-symbols_inventory-2-rounded.svg">&nbsp;
+								Inventory
+							</a>
+					   </li>
+					   <li>
+							<a class="activeDash nav-link" href="settings.html">
+								<img src="../images/material-symbols_settings.svg">&nbsp;
+								Settings
+							</a>
+					   </li>
+					  <li>
+						<a src="logout.html" class="logout nav-link">
+							<img src="../images/Group.svg">&nbsp;
+						Log Out
+						</a>
+					</li>
+					</ul>
+				</div>
+				<a href="dashboard.html" class="dashboardAside_Logo1">
+					<img src="../images/logo.svg">
+				</a>
+			</div>
+			<h1>Settings</h1>
+		</header>
+        <section class="inventory_initialSection">
+            <div class="contain contain_inventory">
+                <button id="btn9" class="myButton">Profile</button>
+                <button id="btn10" class="myButton active">Manage Account</button>
+            </div>
+        </section>
+        <section class="batch_header">
+            <div class="search-container batcharea1">
+                <input type="text" class="search-input" placeholder="Search" />
+                <i class="search-icon"></i>
+            </div>
+            <div class="filter_batch batcharea2">
+                <p>Filter by</p>
+                <div id="farmdropdown-menu">
+                    <a href="#" id="farmdropdown-button" class="farm_dropdownbtn">
+                        <p> Date</p>
+                        <p class="arrow"></p>
+                    </a>
+                    <div id="farmdropdown-content">
+                      <a href="#">Name</a>
+                      <a href="#">Fish Type</a>
+                    </div>
+                </div>
+            </div>
+            <div class="filter_buttons batcharea3">
+                <button class="addbatch custom-modal-button" data-modal="custom-modal-5"><span>+ </span> Add new customer</button>
+                <button class="deletebatch custom-modal-button" data-modal="custom-modal-6">Delete</button>
+            </div>
+            <div class="custom-modal" id="custom-modal-5">
+                <div class="add_NewFarm pondStats">
+                    <div class="For_closeModals">
+                        <h2>Add New Customer</h2>
+                        <p class="close-buttons">&times;</p>
+                    </div>
+                    <form>
+                        <div>
+                            <label for="pondname">First Name</label>
+                            <input type="text" placeholder="Jane">
+                        </div>
+                        <div>
+                            <label for="pondname">LastName</label>
+                            <input type="text" placeholder="Doe">
+                        </div>
+                        <div>
+                            <label for="pondname">Phone Number</label>
+                            <input type="text" placeholder="(234) 80 XXX XXX X">
+                        </div>
+                        <div>
+                            <label for="feedavailable">Purchases Made</label>
+                            <input type="text" placeholder="51">
+                        </div>
+                    </form>
+                    <div  class="batch_createbtn">
+                        <button class="addpond_btn">Add Customer</button>
+                    </div>
+                </div>
+            </div>
+			<div class="custom-modal" id="custom-modal-4">
+				<div class="addHarvest pondStats">
+					<div class="For_closeModals edit_batch">
+						<h2>Edit</h2>
+						<p class="close-buttons">&times;</p>
+					</div>
+					<form>
+						<div>
+                <label for="pondname">First Name</label>
+                <input type="text" placeholder="Jane">
+            </div>
+            <div>
+                <label for="pondname">LastName</label>
+                <input type="text" placeholder="Doe">
+            </div>
+            <div>
+                <label for="pondname">Phone Number</label>
+                <input type="text" placeholder="(234) 80 XXX XXX X">
+            </div>
+            <div>
+                <label for="feedavailable">Purchase Made</label>
+                <input type="text" placeholder="51">
+            </div>
+					</form>
+                    <div  class="viewstat_btn">
+                        <button class="custom-modal-button" data-modal="custom-modal-6">Delete customer</button>
+                        <button>Save changes</button>
+                    </div>
+				</div>
+			</div>
+            <div class="custom-modal" id="custom-modal-6">
+                <div class="add_NewFarm pondStats">
+                    <div class="For_closeModals">
+                        <h2>Delete Customer</h2>
+                        <p class="close-buttons">&times;</p>
+                    </div>
+                    <h3 class="deletepond_h3">You are about to delete this customer forever. Are you really sure about this?</h3>
+                    <div  class="deletepond_btn">
+                        <button class="close-buttons">Cancel</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<section class="batch_tables">
+			<div class="table-container">
+				<table>
+				  <thead>
+					<tr>
+					  <th><input type="checkbox" name="checkbox"></th>
+					  <th>Name</th>
+                      <th>Email</th>
+					  <th>Phone Number</th>
+					  <th>Role</th>
+                      <th></th>
+                      <th></th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td><input type="checkbox" name="checkbox"></td>
+					  <td>Jane Doe</td>
+					  <td>janedoe@example.com</td>
+					  <td>234 X XXX XXXX  X</td>
+                      <td>Admin</td>
+                      <td>
+                        <div id="managedropdown-menu" class="Formanage_menu">
+                            <a href="#" id="managedropdown-button" class="manage_dropdownbtn">
+                                <p class="Activemanage_p"> Batch 7</p>
+                                <p class="arrow"></p>
+                            </a>
+                            <div id="managedropdown-content">
+                                <a href="#">Batch 6</a>
+                                <a href="#">Batch 5</a>
+                            </div>
+                        </div>                        
+                      </td>
+					  <td>
+						<div class="batchdropdown">
+							<button class="batchdropdown-btn">&#10247</button>
+							<div class="batchdropdown-content">
+							  <a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+							  <a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+							</div>
+						</div>
+					  </td>
+					</tr>
+				  </tbody>
+				</table>
+			  </div>
+		</section>
+		
+	</main>
+
+	<script type="text/javascript" src="../js/script.js"></script>
+	<script src="../js/myscript.js"></script>
+    <script type="text/javascript" src="../js/scriptss.js"></script>
+    <script type="text/javascript" src="../js/settingscript.js"></script>
+    <script>
+        // Get the elements
+const dropdownButton = document.getElementById('managedropdown-button');
+const dropdownContent = document.getElementById('managedropdown-content');
+
+// Toggle the dropdown menu when the button is clicked
+dropdownButton.addEventListener('click', () => {
+    dropdownContent.classList.toggle('show');
+});
+
+// Close the dropdown menu when clicking outside
+window.addEventListener('click', (event) => {
+    if (!event.target.matches('.manage_dropdownbtn')) {
+        if (dropdownContent.classList.contains('show')) {
+            dropdownContent.classList.remove('show');
+        }
+    }
+});
+
+    </script>
+	
+</body>
+</html>

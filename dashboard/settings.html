@@ -9,8 +9,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="../js/scripts.js" defer></script>
 	<style>
 	@import url('https://fonts.cdnfonts.com/css/montserrat');
@@ -111,28 +109,45 @@
 			</div>
 			<h1>Settings</h1>
 		</header>
-        <section>
-            <button class="nav-button active" data-target="div1">Show Div 1</button>
-            <button class="nav-button" data-target="div2">Show Div 2</button>
-
-            <div id="div1" class="content">
-            <h2>Div 1</h2>
-            <p>This is the content of Div 1.</p>
+        <section class="inventory_initialSection">
+            <div class="contain contain_inventory">
+                <button id="btn9" class="myButton active">Profile</button>
+                <button id="btn10" class="myButton">Manage Account</button>
             </div>
-
-            <div id="div2" class="content">
-            <h2>Div 2</h2>
-            <p>This is the content of Div 2.</p>
-            </div>
-
-
         </section>
-		
+		<section class="settings_container">
+			<form>
+				<article>
+					<div>
+						<label for="Fname">First Name</label>
+						<input type="text" placeholder="Jane">
+					</div>
+					<div>
+						<label for="Lname">Last Name</label>
+						<input type="text" placeholder="Doe">
+					</div>
+				</article>
+				<div>
+					<label for="email">Email address</label>
+					<input type="email" placeholder="janedoe@examplemail.com">
+				</div>
+				<div>
+					<label for="address">Location</label>
+					<input type="text" placeholder="Rivers State">
+				</div>
+				<div>
+					<label for="Pnumber">Phone Number</label>
+					<input type="text" placeholder="XXXXXXXX">
+				</div>
+				<button>Save</button>
+			</form>
+		</section>
 	</main>
 
 	<script type="text/javascript" src="../js/script.js"></script>
 	<script src="../js/myscript.js"></script>
-	<script type="text/javascript" src="../js/scriptss.js"></script>
+    <script type="text/javascript" src="../js/scriptss.js"></script>
+	<script type="text/javascript" src="../js/settingscript.js"></script>
 	
 </body>
 </html>
