@@ -3567,6 +3567,17 @@ color: var(--color-primary);
     'footer';
   }
 }
+
+@media only screen and (max-width:400px) {
+  .inventory_initialSection {
+    margin: 10px 10px;
+  }
+
+  .expensesdropdown_calender {
+    margin: 0px 8px;
+  
+  }
+}
   /* Inventory Page ENDS */
   /* Settings Page START */
   .content {
