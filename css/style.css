@@ -2730,7 +2730,7 @@ html {
       }
 
     .add_NewFarm button {
-        width: 50%;
+        width: 60%;
     }
 
     .For_closeModals {
@@ -2740,6 +2740,7 @@ html {
 
     .pondStats form{
         gap: 10px;
+        grid-template-columns: auto;
     }
 
     .pondStats button {
