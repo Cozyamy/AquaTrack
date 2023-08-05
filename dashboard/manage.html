@@ -61,7 +61,7 @@
 						<span class="bar"></span>
 					</div>
 					<ul class="navbar-menu navMenu">
-					  <li><a class="activeDash nav-link" href="dashboard.html">
+					  <li><a class="nav-link" href="dashboard.html">
 							<img src="../images/Dashboard.svg">&nbsp; Dashboard
 						   </a>
 					   </li>
@@ -115,57 +115,15 @@
                 <button id="btn10" class="myButton active">Manage Account</button>
             </div>
         </section>
-        <section class="batch_header">
-            <div class="search-container batcharea1">
-                <input type="text" class="search-input" placeholder="Search" />
-                <i class="search-icon"></i>
-            </div>
-            <div class="filter_batch batcharea2">
-                <p>Filter by</p>
-                <div id="farmdropdown-menu">
-                    <a href="#" id="farmdropdown-button" class="farm_dropdownbtn">
-                        <p> Date</p>
-                        <p class="arrow"></p>
-                    </a>
-                    <div id="farmdropdown-content">
-                      <a href="#">Name</a>
-                      <a href="#">Fish Type</a>
-                    </div>
-                </div>
-            </div>
-            <div class="filter_buttons batcharea3">
-                <button class="addbatch custom-modal-button" data-modal="custom-modal-5"><span>+ </span> Add new customer</button>
-                <button class="deletebatch custom-modal-button" data-modal="custom-modal-6">Delete</button>
-            </div>
-            <div class="custom-modal" id="custom-modal-5">
-                <div class="add_NewFarm pondStats">
-                    <div class="For_closeModals">
-                        <h2>Add New Customer</h2>
-                        <p class="close-buttons">&times;</p>
-                    </div>
-                    <form>
-                        <div>
-                            <label for="pondname">First Name</label>
-                            <input type="text" placeholder="Jane">
-                        </div>
-                        <div>
-                            <label for="pondname">LastName</label>
-                            <input type="text" placeholder="Doe">
-                        </div>
-                        <div>
-                            <label for="pondname">Phone Number</label>
-                            <input type="text" placeholder="(234) 80 XXX XXX X">
-                        </div>
-                        <div>
-                            <label for="feedavailable">Purchases Made</label>
-                            <input type="text" placeholder="51">
-                        </div>
-                    </form>
-                    <div  class="batch_createbtn">
-                        <button class="addpond_btn">Add Customer</button>
-                    </div>
-                </div>
-            </div>
+		<div id="emailWarning" style="color: red; display: none; margin: 10px 31px -30px;">
+			Please enter a valid email address.
+		  </div>
+		<section class="manage_header">
+			<div id="emailListContainer">
+				<div id="emailList"></div>
+				<input type="email" id="emailInput" placeholder="Enter email">
+			  </div>
+			  <button id="addEmailButton">Invite Users</button>
 			<div class="custom-modal" id="custom-modal-4">
 				<div class="addHarvest pondStats">
 					<div class="For_closeModals edit_batch">
@@ -178,20 +136,20 @@
                 <input type="text" placeholder="Jane">
             </div>
             <div>
-                <label for="pondname">LastName</label>
+                <label for="pondname">Last Name</label>
                 <input type="text" placeholder="Doe">
+            </div>
+			<div>
+                <label for="feedavailable">Email</label>
+                <input type="text" placeholder="janedoe@examplemail.com">
             </div>
             <div>
                 <label for="pondname">Phone Number</label>
                 <input type="text" placeholder="(234) 80 XXX XXX X">
             </div>
-            <div>
-                <label for="feedavailable">Purchase Made</label>
-                <input type="text" placeholder="51">
-            </div>
 					</form>
                     <div  class="viewstat_btn">
-                        <button class="custom-modal-button" data-modal="custom-modal-6">Delete customer</button>
+                        <button class="custom-modal-button" data-modal="custom-modal-6">Delete user</button>
                         <button>Save changes</button>
                     </div>
 				</div>
@@ -199,10 +157,10 @@
             <div class="custom-modal" id="custom-modal-6">
                 <div class="add_NewFarm pondStats">
                     <div class="For_closeModals">
-                        <h2>Delete Customer</h2>
+                        <h2>Delete User</h2>
                         <p class="close-buttons">&times;</p>
                     </div>
-                    <h3 class="deletepond_h3">You are about to delete this customer forever. Are you really sure about this?</h3>
+                    <h3 class="deletepond_h3">You are about to delete this user forever. Are you really sure about this?</h3>
                     <div  class="deletepond_btn">
                         <button class="close-buttons">Cancel</button>
                         <button>Delete</button>
@@ -217,32 +175,33 @@
 					<tr>
 					  <th><input type="checkbox" name="checkbox"></th>
 					  <th>Name</th>
-                      <th>Email</th>
-					  <th>Phone Number</th>
+					  <th>Email</th>
+					  <th style="white-space: nowrap;">Phone Number</th>
 					  <th>Role</th>
-                      <th></th>
-                      <th></th>
+					  <th></th>
+					  <th></th>
 					</tr>
 				  </thead>
 				  <tbody>
-					<tr>
+					<tr style="display: none;"></tr>
+					<tr style="display: none;">
 					  <td><input type="checkbox" name="checkbox"></td>
 					  <td>Jane Doe</td>
 					  <td>janedoe@example.com</td>
 					  <td>234 X XXX XXXX  X</td>
-                      <td>Admin</td>
-                      <td>
-                        <div id="managedropdown-menu" class="Formanage_menu">
-                            <a href="#" id="managedropdown-button" class="manage_dropdownbtn">
-                                <p class="Activemanage_p"> Batch 7</p>
-                                <p class="arrow"></p>
-                            </a>
-                            <div id="managedropdown-content">
-                                <a href="#">Batch 6</a>
-                                <a href="#">Batch 5</a>
-                            </div>
-                        </div>                        
-                      </td>
+					  <td>Admin</td>
+					  <td>
+						<div id="farmdropdown-menu">
+							<a href="#" id="farmdropdown-button" class="manage_dropdownbtn">
+								<p>can edit</p>
+								<p class="arrow"></p>
+							</a>
+							<div id="farmdropdown-content" style="min-width: 115px;">
+							  <a href="#">can view</a>
+							  <a href="#">can edit</a>
+							</div>
+						</div>
+					  </td>
 					  <td>
 						<div class="batchdropdown">
 							<button class="batchdropdown-btn">&#10247</button>
@@ -253,37 +212,112 @@
 						</div>
 					  </td>
 					</tr>
+					<tr>
+						<td><input type="checkbox" name="checkbox"></td>
+						<td>Jane Doe</td>
+						<td>janedoe@example.com</td>
+						<td>234 X XXX XXXX  X</td>
+						<td>Admin</td>
+						<td>
+							<div class="batchdropdown">
+								<button class="batchdropdown-btn manage_dropdownbtn">can edit &nbsp;<img src="../images/mdi_chevron-down.png"></button>
+								<div class="batchdropdown-content">
+								  <a href="#"> &nbsp;can edit</a>
+								  <a href="#"> &nbsp;can view</a>
+								</div>
+							</div>
+						</td>
+						<td>
+						  <div class="batchdropdown">
+							  <button class="batchdropdown-btn">&#10247</button>
+							  <div class="batchdropdown-content">
+								<a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+								<a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+							  </div>
+						  </div>
+						</td>
+					  </tr>
+					<tr>
+						<td><input type="checkbox" name="checkbox"></td>
+						<td>Jane Doe</td>
+						<td>janedoe@example.com</td>
+						<td>234 X XXX XXXX  X</td>
+						<td>Admin</td>
+						<td>
+							<div class="batchdropdown">
+								<button class="batchdropdown-btn manage_dropdownbtn">owner</button>
+							</div>
+						</td>
+						<td>
+						  <div class="batchdropdown">
+							  <button class="batchdropdown-btn">&#10247</button>
+							  <div class="batchdropdown-content">
+								<a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+								<a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+							  </div>
+						  </div>
+						</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="checkbox"></td>
+						<td>Jane Doe</td>
+						<td>janedoe@example.com</td>
+						<td>234 X XXX XXXX  X</td>
+						<td>Admin</td>
+						<td>
+							<div class="batchdropdown">
+								<button class="batchdropdown-btn manage_dropdownbtn">can view &nbsp;<img src="../images/mdi_chevron-down.png"></button>
+								<div class="batchdropdown-content">
+								  <a href="#"> &nbsp;can edit</a>
+								  <a href="#"> &nbsp;can view</a>
+								</div>
+							</div>
+						</td>
+						<td>
+						  <div class="batchdropdown">
+							  <button class="batchdropdown-btn">&#10247</button>
+							  <div class="batchdropdown-content">
+								<a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+								<a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+							  </div>
+						  </div>
+						</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="checkbox"></td>
+						<td>Jane Doe</td>
+						<td>janedoe@example.com</td>
+						<td>234 X XXX XXXX  X</td>
+						<td>Admin</td>
+						<td>
+							<div class="batchdropdown">
+								<button class="batchdropdown-btn manage_dropdownbtn">can view &nbsp;<img src="../images/mdi_chevron-down.png"></button>
+								<div class="batchdropdown-content">
+								  <a href="#"> &nbsp;can edit</a>
+								  <a href="#"> &nbsp;can view</a>
+								</div>
+							</div>
+						</td>
+						<td>
+						  <div class="batchdropdown">
+							  <button class="batchdropdown-btn">&#10247</button>
+							  <div class="batchdropdown-content">
+								<a class="custom-modal-button" data-modal="custom-modal-4" href="#"><img src="../images/material-symbols_edit.svg"> &nbsp;Edit</a>
+								<a class="custom-modal-button" data-modal="custom-modal-6" href="#"><img src="../images/ic_baseline-delete.svg"> &nbsp;Delete</a>
+							  </div>
+						  </div>
+						</td>
+					  </tr>
 				  </tbody>
 				</table>
 			  </div>
 		</section>
-		
 	</main>
 
 	<script type="text/javascript" src="../js/script.js"></script>
 	<script src="../js/myscript.js"></script>
     <script type="text/javascript" src="../js/scriptss.js"></script>
-    <script type="text/javascript" src="../js/settingscript.js"></script>
-    <script>
-        // Get the elements
-const dropdownButton = document.getElementById('managedropdown-button');
-const dropdownContent = document.getElementById('managedropdown-content');
-
-// Toggle the dropdown menu when the button is clicked
-dropdownButton.addEventListener('click', () => {
-    dropdownContent.classList.toggle('show');
-});
-
-// Close the dropdown menu when clicking outside
-window.addEventListener('click', (event) => {
-    if (!event.target.matches('.manage_dropdownbtn')) {
-        if (dropdownContent.classList.contains('show')) {
-            dropdownContent.classList.remove('show');
-        }
-    }
-});
-
-    </script>
-	
+	<script type="text/javascript" src="../js/settingscript.js"></script>
+	<script type="text/javascript" src="../js/managescript.js"></script>
 </body>
 </html>
